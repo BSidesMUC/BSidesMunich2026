@@ -1,0 +1,36 @@
+---
+layout: page
+title: Organizers
+subtitle: The team behind BSides Munich.
+---
+
+<div class="organizer-grid">
+  {% assign organizers = "Dagmar,Eduardo,Ingmar,JennJ,Morton,Nicole,Radoslav,Sandra,Silvio,Sneha" | split: "," %}
+  {% assign handles = ",,,@jennjanesko,,,,,,@Sneharajguru" | split: "," %}
+  {% assign bios = site.data.organizers %}
+
+  {% for name in organizers %}
+  <div class="organizer-card fade-in">
+    <div class="organizer-header">
+      <div class="organizer-avatar">{{ name | slice: 0 }}</div>
+      <div>
+        <h3 class="organizer-name">{{ name }}</h3>
+        {% assign idx = forloop.index0 %}
+        {% if handles[idx] != "" and handles[idx] %}
+        <a class="organizer-handle" href="https://twitter.com/{{ handles[idx] | remove: '@' }}" target="_blank">{{ handles[idx] }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="neon-divider"></div>
+
+<div class="cta-section" style="padding: 60px 0;">
+  <h2 class="cta-title">Want to <span>Help</span>?</h2>
+  <p class="cta-text">
+    BSides Munich is organized by volunteers. If you'd like to help out, reach out to us
+    via <a href="{{ site.discord }}">Discord</a> or <a href="mailto:orga@bsidesmunich.org">email</a>.
+  </p>
+</div>

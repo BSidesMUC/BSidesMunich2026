@@ -1,0 +1,104 @@
+.agenda-track {
+  margin-bottom: 60px;
+}
+
+.track-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+}
+
+.track-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+  flex-shrink: 0;
+
+  &.pink { background: var(--neon-pink); box-shadow: var(--glow-pink); }
+}
+
+.track-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.track-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.agenda-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 229, 255, 0.04);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  align-items: center;
+  border-left: 2px solid transparent;
+
+  &:hover {
+    border-left-color: var(--neon-pink);
+    background: var(--bg-card-hover);
+  }
+
+  &.break {
+    background: transparent;
+    border: 1px dashed rgba(255, 255, 255, 0.04);
+    border-left: 2px solid transparent;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.7;
+      border-left-color: transparent;
+    }
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+.agenda-time {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--neon-cyan);
+  white-space: nowrap;
+}
+
+.agenda-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.agenda-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.agenda-speaker {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--neon-pink);
+}

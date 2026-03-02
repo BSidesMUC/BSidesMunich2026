@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-sun"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-lines"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">november_2026 :: munich, germany</div>
+    <h1 class="hero-title">
+      <span class="title-bsides">BSides</span>
+      <span class="title-munich">Munich</span>
+    </h1>
+    <p class="hero-year">// 10th edition<span class="cursor-blink"></span></p>
+    <p class="hero-description">
+      The premiere, independently organized computer security event in the Munich area.
+      Bringing together local and internationally renowned experts since 2017.
+    </p>
+    <div class="hero-actions">
+      <a href="{{ '/tickets' | relative_url }}" class="btn btn-primary">./get_tickets</a>
+      <a href="{{ '/cfp' | relative_url }}" class="btn btn-outline">./submit_talk</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">$ cat ./event_info.txt</p>
+      <h2 class="section-title">dates &amp; <span>venues</span></h2>
+      <p class="section-subtitle">Two days of workshops, talks, and community-driven security.</p>
+    </div>
+
+    <div class="info-cards">
+      <div class="info-card fade-in">
+        <div class="info-card-icon">&#x1F6E0;</div>
+        <p class="info-card-label">Workshops</p>
+        <h3 class="info-card-title">{{ site.workshop_date }}</h3>
+        <p class="info-card-text">
+          {{ site.workshop_venue }}<br>
+          {{ site.workshop_address }}
+        </p>
+      </div>
+      <div class="info-card fade-in">
+        <div class="info-card-icon">&#x1F399;</div>
+        <p class="info-card-label">Conference</p>
+        <h3 class="info-card-title">{{ site.conference_date }}</h3>
+        <p class="info-card-text">
+          {{ site.conference_venue }}<br>
+          {{ site.conference_address }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="neon-divider"></div></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">$ cat ./stats_2025.log</p>
+      <h2 class="section-title">BSides Munich <span>2025</span></h2>
+      <p class="section-subtitle">
+        <a href="{{ site.last_year_url }}" target="_blank">Website</a> &middot;
+        <a href="{{ site.last_year_recordings }}" target="_blank">Recordings</a>
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-item fade-in">
+        <div class="stat-number">{{ site.stats.participants }}+</div>
+        <div class="stat-label">Participants</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-number">{{ site.stats.presentations }}</div>
+        <div class="stat-label">Presentations</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-number">{{ site.stats.workshops }}</div>
+        <div class="stat-label">Workshops</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-number">{{ site.stats.hours }}</div>
+        <div class="stat-label">Hours Security</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-title">Join the <span>Community</span></h2>
+    <p class="cta-text">
+      BSides events are community driven. The success of this event depends on your
+      active participation &mdash; give a talk, create a workshop, design a challenge, or help with sponsoring.
+    </p>
+    <div class="cta-buttons">
+      <a href="https://twitter.com/{{ site.twitter }}" target="_blank" class="btn btn-outline">./follow --platform x</a>
+      <a href="{{ site.discord }}" target="_blank" class="btn btn-outline">./join --discord</a>
+    </div>
+  </div>
+</section>

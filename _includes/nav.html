@@ -1,0 +1,23 @@
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <span class="logo-text">BSides<span class="logo-accent">MUC</span></span>
+      <span class="logo-year">2026</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+      <li><a href="{{ '/sponsors' | relative_url }}" class="nav-link">Sponsors</a></li>
+      <li><a href="{{ '/speakers' | relative_url }}" class="nav-link">Speakers</a></li>
+      <li><a href="{{ '/agenda' | relative_url }}" class="nav-link">Agenda</a></li>
+      <li><a href="{{ '/tickets' | relative_url }}" class="nav-link">Tickets</a></li>
+      <li><a href="{{ '/coc' | relative_url }}" class="nav-link">Code of Conduct</a></li>
+      <li><a href="{{ '/organizers' | relative_url }}" class="nav-link">Organizers</a></li>
+      <li><a href="{{ '/cfp' | relative_url }}" class="nav-link nav-link--cta">CFP</a></li>
+    </ul>
+  </div>
+</nav>

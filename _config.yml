@@ -1,0 +1,41 @@
+title: "BSides Munich 2026"
+subtitle: "10th Edition"
+description: "BSides Munich 2026 - The premiere, independently organized computer security event in the Munich, Germany area."
+url: "https://2026.bsidesmunich.org"
+baseurl: ""
+
+twitter: "bsidesmunich"
+discord: "https://discord.gg/RVWbAk5R6u"
+meetup: "https://www.meetup.com/MUC-SEC/"
+
+workshop_date: "2026-11-14"
+workshop_venue: "Hochschule München"
+workshop_address: "Lothstraße 64, 80335 München"
+
+conference_date: "2026-11-16"
+conference_venue: "TBA"
+conference_address: "TBA"
+
+last_year_url: "https://2025.bsidesmunich.org/"
+last_year_recordings: "https://www.youtube.com/watch?v=osPEOGgkJjY&list=PL8N5HiRDvZ-ep6hwYBK4BjrmI2qV8Zl24"
+
+stats:
+  participants: "364"
+  presentations: "22"
+  workshops: "6"
+  hours: "40"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins: []
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - Dockerfile
+  - docker-compose.yml
+  - .dockerignore

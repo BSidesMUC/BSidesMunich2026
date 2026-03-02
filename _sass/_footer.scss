@@ -1,0 +1,134 @@
+.footer {
+  position: relative;
+  padding: 80px 0 40px;
+  border-top: 1px solid rgba(255, 20, 147, 0.08);
+  background: linear-gradient(180deg, var(--bg-primary), #080814);
+}
+
+.footer-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: var(--gradient-miami);
+  box-shadow: 0 0 30px rgba(255, 20, 147, 0.2), 0 0 60px rgba(0, 229, 255, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-brand {
+  .logo-text {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--neon-pink);
+    text-shadow: var(--glow-pink);
+
+    .logo-accent {
+      color: var(--neon-cyan);
+      text-shadow: var(--glow-cyan);
+    }
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 12px 0 20px;
+    line-height: 1.7;
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: 8px;
+
+  a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 229, 255, 0.12);
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--neon-cyan);
+      border-color: var(--neon-cyan);
+      box-shadow: var(--glow-cyan);
+    }
+  }
+}
+
+.footer-links {
+  h4 {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    color: var(--neon-pink);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 8px;
+
+      a {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: var(--neon-cyan);
+          text-shadow: var(--glow-cyan);
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+}
+
+.footer-legal {
+  a {
+    color: var(--text-muted);
+
+    &:hover {
+      color: var(--neon-cyan);
+    }
+  }
+}

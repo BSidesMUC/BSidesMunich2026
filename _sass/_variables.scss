@@ -1,0 +1,38 @@
+:root {
+  --bg-primary: #0b0b1a;
+  --bg-secondary: #0f0e1e;
+  --bg-card: #12112a;
+  --bg-card-hover: #1a1840;
+
+  --neon-pink: #ff1493;
+  --neon-cyan: #00e5ff;
+  --neon-magenta: #e040fb;
+  --neon-orange: #ff6e27;
+  --neon-yellow: #ffd600;
+  --neon-red: #ff3366;
+
+  --sunset-top: #ffd600;
+  --sunset-mid: #ff6e27;
+  --sunset-bot: #ff1493;
+
+  --text-primary: #f0ecf8;
+  --text-secondary: #b0a8c8;
+  --text-muted: #706890;
+
+  --glow-pink: 0 0 12px rgba(255, 20, 147, 0.5), 0 0 40px rgba(255, 20, 147, 0.15);
+  --glow-cyan: 0 0 12px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.15);
+  --glow-magenta: 0 0 12px rgba(224, 64, 251, 0.4), 0 0 40px rgba(224, 64, 251, 0.15);
+
+  --gradient-miami: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
+  --gradient-sunset: linear-gradient(180deg, var(--neon-yellow), var(--neon-orange), var(--neon-pink), var(--neon-magenta));
+  --gradient-hot: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
+
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --container-width: 1200px;
+  --nav-height: 72px;
+  --border-radius: 6px;
+  --border-radius-sm: 3px;
+}
