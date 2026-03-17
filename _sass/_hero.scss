@@ -72,6 +72,34 @@
   }
 }
 
+.hero-sun--logo {
+  width: min(86vw, 700px);
+  height: min(40vw, 340px);
+  border-radius: 0;
+  background: url("/assets/images/bsides-munich-logo.png") center bottom / contain no-repeat;
+  opacity: 0.34;
+  filter: drop-shadow(0 0 30px rgba(255, 20, 147, 0.35))
+    drop-shadow(0 0 55px rgba(0, 229, 255, 0.2));
+
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    bottom: -46px;
+    left: -100px;
+    right: -100px;
+    height: 110px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 110, 39, 0.24),
+      rgba(255, 20, 147, 0.08),
+      transparent
+    );
+    filter: blur(18px);
+  }
+}
+
 .hero-lines {
   position: absolute;
   inset: 0;
