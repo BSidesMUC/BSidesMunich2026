@@ -5,14 +5,14 @@ subtitle: The team behind BSides Munich.
 ---
 
 <div class="organizer-grid">
-  {% assign organizers = site.data.organizers %}
-  {% for organizer_name in organizers %}
-  {% assign organizer = organizers[organizer_name[0]] %}
+  {% for organizer_entry in site.data.organizers %}
+  {% assign organizer_name = organizer_entry[0] %}
+  {% assign organizer = organizer_entry[1] %}
   <div class="organizer-card fade-in">
     <div class="organizer-header">
-      <div class="organizer-avatar">{{ organizer_name[0] | slice: 0 }}</div>
+      <div class="organizer-avatar">{{ organizer_name | slice: 0 }}</div>
       <div>
-        <h3 class="organizer-name">{{ organizer_name[0] }}</h3>
+        <h3 class="organizer-name">{{ organizer_name }}</h3>
         {% if organizer.handle %}
         <a class="organizer-handle" href="https://twitter.com/{{ organizer.handle | remove: '@' }}" target="_blank">{{ organizer.handle }}</a>
         {% endif %}
