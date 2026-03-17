@@ -1,40 +1,50 @@
 Dagmar:
   handle:
+  image: "/assets/images/organizers/dagmar.jpg"
   bio: "Coming from a non-technical background, Dagmar brings her knowledge of event organization to BSidesMunich and - after moving up North again - to Elbsides, Hamburg’s Bsides event. Through previous experiences in professional stage management / production for theatre in the UK and US, as well as Sci-Fi conventions in Germany, she teamed up with her husband Morton to organize events for the computer security industry. Having lived and worked in a variety of countries, she enjoys traveling the globe and seeing theatre productions, especially in London."
 
 Eduardo:
   handle:
+  image: "/assets/images/organizers/eduardo.jpg"
   bio: "Eduardo was born in Guatemala and has been part of the organizing team for the past few years, after starting out as a volunteer. Based in Munich, he works on keeping complex systems secure and running smoothly. Outside of that, he enjoys bouldering, snowboarding, and most recently, the wild adventure of being a new dad."
 
 Ingmar:
   handle:
+  image: "/assets/images/organizers/ingmar.png"
   bio: "Originally from the hilly Sauerland Ingmar was drawn by the big mountains (and of a job offer) to munich almost 15 years ago. After starting in systems and network administration Ingmar fell into the rabbit hole of security and annoyed clients with his findings as a penetration test and red teamer. His spare time his spent around the alps, on motorcycles, bikes or on foot."
 
 Javier:
   handle: ""
+  image:
   bio: "-"
 
 Jörg:
   handle: ""
+  image:
   bio: "-"
 
 Marius:
   handle: ""
+  image: "/assets/images/organizers/marius.jpg"
   bio: "Marius worked for 5 years at the German Patent and Trademark Office on the electronic patent and trademark filing systems. Since 2025, he has been working at the University of Applied Sciences Munich as a researcher and PhD student investigating the resiliency of operational technology at the HM-SecLab. Since his master's degree in 2023, he has been working on SBOMs and is a regular contributor to SBOM projects. Mostly, he can be found with the SBOM-Everywhere Working Group at the OpenSSF. He is one of the maintainers and developers of the SBOM-Tooling Catalog hosted by the OpenSSF."
 
 Morton:
   handle:
+  image: "/assets/images/organizers/morton.jpg"
   bio: "Morton has been a pioneer in anti-virus and IDS research since it’s inception in the late 1980’s. After working on various anti-virus engines, from his own, through S&S International’s (now McAfee) to IBM, he moved on to designing novel security models in the IoT and compliance space. More recently, he has been working at Trend Micro in Threat Research."
 
 Radoslav:
   handle:
+  image: "/assets/images/organizers/radoslav.jpg"
   bio: "Radoslav has passion about technologies, know-how sharing and promotion of best practices. With more than two decades in the IT sector, he has plenty of experience to share. For many years he has been supporting local tech communities. In his free time, he is writing articles, giving tech talks and organizing activities for children."
 
 Silvio:
   handle:
+  image: "/assets/images/organizers/silvio.jpg"
   bio: "Silvio started his cybersecurity journey when IRC was still a thing but BBS boards weren’t anymore. Since that time he was a student, a systems engineer, a consultant, a researcher and currently is an enthusiastic collector of red-teamers tears as part of an awesome blue team. He likes to do non computer stuff as well - but that’s a story for a different day."
 
 Sneha:
   handle: "@Sneharajguru"
+  image: "/assets/images/organizers/sneha.jpg"
   bio: "Sneha has been working in the field of information security for over a decade now, she has spoken and provided training at various international security conferences. Outside work, she likes to take small hikes in the alps, spends her time building the 75192 Millennium Falcon and is obsessed with Darth Vader."
 

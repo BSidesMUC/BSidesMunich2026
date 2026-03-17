@@ -10,7 +10,16 @@ subtitle: The team behind BSides Munich.
   {% assign organizer = organizer_entry[1] %}
   <div class="organizer-card fade-in">
     <div class="organizer-header">
+      {% if organizer.image %}
+      <img
+        class="organizer-avatar organizer-avatar--image"
+        src="{{ organizer.image | relative_url }}"
+        alt="{{ organizer_name }} portrait"
+        loading="lazy"
+      >
+      {% else %}
       <div class="organizer-avatar">{{ organizer_name | slice: 0 }}</div>
+      {% endif %}
       <div>
         <h3 class="organizer-name">{{ organizer_name }}</h3>
         {% if organizer.handle %}
@@ -18,7 +27,7 @@ subtitle: The team behind BSides Munich.
         {% endif %}
       </div>
     </div>
-    {% if organizer.bio %}
+    {% if organizer.bio and organizer.bio != "-" %}
     <p class="organizer-bio">{{ organizer.bio }}</p>
     {% endif %}
   </div>

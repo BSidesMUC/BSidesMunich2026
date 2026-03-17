@@ -83,9 +83,11 @@
 
 /* Organizer Cards */
 .organizer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .organizer-card {
@@ -110,29 +112,36 @@
 }
 
 .organizer-avatar {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background: var(--gradient-sunset);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--bg-primary);
   flex-shrink: 0;
 }
 
+.organizer-avatar--image {
+  object-fit: cover;
+  border: 2px solid rgba(0, 229, 255, 0.2);
+  background: none;
+}
+
 .organizer-name {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-primary);
+  margin-bottom: 4px;
 }
 
 .organizer-handle {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--neon-cyan);
   text-decoration: none;
 }
@@ -142,6 +151,7 @@
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.7;
+  margin: 0;
 }
 
 /* Sponsor Tiers */
