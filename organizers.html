@@ -5,22 +5,22 @@ subtitle: The team behind BSides Munich.
 ---
 
 <div class="organizer-grid">
-  {% assign organizers = "Dagmar,Eduardo,Ingmar,JennJ,Morton,Nicole,Radoslav,Sandra,Silvio,Sneha" | split: "," %}
-  {% assign handles = ",,,@jennjanesko,,,,,,@Sneharajguru" | split: "," %}
-  {% assign bios = site.data.organizers %}
-
-  {% for name in organizers %}
+  {% assign organizers = site.data.organizers %}
+  {% for organizer_name in organizers %}
+  {% assign organizer = organizers[organizer_name[0]] %}
   <div class="organizer-card fade-in">
     <div class="organizer-header">
-      <div class="organizer-avatar">{{ name | slice: 0 }}</div>
+      <div class="organizer-avatar">{{ organizer_name[0] | slice: 0 }}</div>
       <div>
-        <h3 class="organizer-name">{{ name }}</h3>
-        {% assign idx = forloop.index0 %}
-        {% if handles[idx] != "" and handles[idx] %}
-        <a class="organizer-handle" href="https://twitter.com/{{ handles[idx] | remove: '@' }}" target="_blank">{{ handles[idx] }}</a>
+        <h3 class="organizer-name">{{ organizer_name[0] }}</h3>
+        {% if organizer.handle %}
+        <a class="organizer-handle" href="https://twitter.com/{{ organizer.handle | remove: '@' }}" target="_blank">{{ organizer.handle }}</a>
         {% endif %}
       </div>
     </div>
+    {% if organizer.bio %}
+    <p class="organizer-bio">{{ organizer.bio }}</p>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
