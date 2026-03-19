@@ -20,8 +20,8 @@ Javier:
 
 Jörg:
   handle: ""
-  image:
-  bio: "-"
+  image: "/assets/images/organizers/joerg.jpg"
+  bio: "Jörg has over 20 years of experience in IT and security and was influenced as a teenager by FreeBSD/Linux, Richard Stevens, and the Rainbow Books, building a strong foundation and curiosity for low-level systems and security. He focuses on networks, security, and everything behind the scenes. In his free time, he also builds and maintains his own open-source projects."
 
 Marius:
   handle: ""
