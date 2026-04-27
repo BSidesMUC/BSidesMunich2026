@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 700" width="1100" height="700">
+
+  <!-- White background -->
+  <rect width="1100" height="700" fill="#ffffff"/>
+
+  <!-- Original logo as base -->
+  <image href="bsides-munich-logo.png" x="30" y="30" width="1040" height="620" preserveAspectRatio="xMidYMid meet"/>
+
+  <!-- ====== RED DOTTED TREASURE MAP LINE ====== -->
+  <path d="M 70,580
+           C 100,560 120,520 150,490
+           Q 180,455 210,440
+           C 245,425 275,450 310,430
+           Q 350,405 380,370
+           C 400,340 420,350 460,330
+           Q 500,310 530,285
+           C 560,260 590,275 630,255
+           Q 670,235 710,215
+           C 750,195 790,210 830,190
+           Q 870,170 910,150
+           C 945,135 975,148 1010,135
+           L 1040,125"
+        fill="none"
+        stroke="#cc2222"
+        stroke-width="2.5"
+        stroke-dasharray="10,7"
+        stroke-linecap="round"
+        opacity="0.7"/>
+
+  <!-- Compass rose at start -->
+  <g transform="translate(70, 605)" opacity="0.55">
+    <circle r="13" fill="none" stroke="#cc2222" stroke-width="1"/>
+    <polygon points="0,-10 2,-3 0,0 -2,-3" fill="#cc2222"/>
+    <polygon points="0,10 2,3 0,0 -2,3" fill="#882222"/>
+    <polygon points="-10,0 -3,-2 0,0 -3,2" fill="#882222"/>
+    <polygon points="10,0 3,-2 0,0 3,2" fill="#cc2222"/>
+    <text x="0" y="-16" font-family="serif" font-size="7" fill="#cc2222" text-anchor="middle" font-weight="bold">N</text>
+  </g>
+
+  <!-- Small x marks along path -->
+  <g fill="none" stroke="#cc2222" stroke-width="1.5" opacity="0.55">
+    <g transform="translate(310,430)">
+      <line x1="-4" y1="-4" x2="4" y2="4"/>
+      <line x1="4" y1="-4" x2="-4" y2="4"/>
+    </g>
+    <g transform="translate(630,255)">
+      <line x1="-4" y1="-4" x2="4" y2="4"/>
+      <line x1="4" y1="-4" x2="-4" y2="4"/>
+    </g>
+    <g transform="translate(830,190)">
+      <line x1="-4" y1="-4" x2="4" y2="4"/>
+      <line x1="4" y1="-4" x2="-4" y2="4"/>
+    </g>
+  </g>
+
+  <!-- Treasure X at the end -->
+  <g transform="translate(1045, 120)" opacity="0.7">
+    <line x1="-10" y1="-10" x2="10" y2="10" stroke="#cc2222" stroke-width="3"/>
+    <line x1="10" y1="-10" x2="-10" y2="10" stroke="#cc2222" stroke-width="3"/>
+  </g>
+
+  <!-- ====== VERY SUBTLE HACKER TOUCHES ====== -->
+  <g font-family="'Courier New', monospace" font-size="8" fill="#333" opacity="0.06">
+    <text x="35" y="25">01101000 01100001 01100011 01101011</text>
+    <text x="860" y="20">0x42534944 0x4553</text>
+    <text x="40" y="685">root@bsides-muc:~$ nmap -sV</text>
+    <text x="830" y="690">./pwn --target munich</text>
+  </g>
+
+</svg>

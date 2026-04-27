@@ -177,6 +177,7 @@
   &.gold { color: var(--neon-yellow); text-shadow: 0 0 15px rgba(255, 214, 0, 0.4); }
   &.silver { color: #b0b0b0; }
   &.bronze { color: var(--neon-orange); text-shadow: 0 0 15px rgba(255, 110, 39, 0.3); }
+  &.partners { color: var(--neon-cyan, #00e5ff); text-shadow: 0 0 15px rgba(0, 229, 255, 0.3); }
 }
 
 .sponsor-logos {
