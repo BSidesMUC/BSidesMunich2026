@@ -268,8 +268,10 @@
   }
 
   &--platin {
-    padding: 40px 56px;
-    img { max-width: 260px; max-height: 160px; }
+    padding: 0;
+    width: 320px;
+    height: 140px;
+    img { max-width: 260px; max-height: 100px; }
     &:hover { border-color: rgba(224, 224, 255, 0.5); }
   }
 
