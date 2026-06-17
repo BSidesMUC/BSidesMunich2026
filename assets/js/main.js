@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (heroLogo && !prefersReducedMotion) {
     const palettes = ['glow-a', 'glow-b', 'glow-c', 'glow-d'];
-    let i = 0;
-    heroLogo.classList.add(palettes[0]);
+    let i = Math.floor(Math.random() * palettes.length);
+    heroLogo.classList.add(palettes[i]);
     setInterval(() => {
       heroLogo.classList.remove(palettes[i]);
       i = (i + 1) % palettes.length;
