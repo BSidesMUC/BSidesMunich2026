@@ -145,6 +145,26 @@
   }
 }
 
+.hero-logo {
+  display: block;
+  width: clamp(280px, 45vw, 530px);
+  height: auto;
+  margin: 0 auto 16px;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.55))
+          drop-shadow(0 0 11px rgba(255, 20, 147, 0.7))
+          drop-shadow(0 0 24px rgba(0, 229, 255, 0.55));
+  animation: hero-logo-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo { animation: none; }
+}
+
 .hero-year {
   font-family: var(--font-mono);
   font-size: clamp(1rem, 2.5vw, 1.5rem);
