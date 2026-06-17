@@ -39,8 +39,8 @@
   bottom: 30%;
   left: 50%;
   transform: translateX(-50%);
-  width: 320px;
-  height: 320px;
+  width: clamp(180px, 48vw, 320px);
+  height: clamp(180px, 48vw, 320px);
   border-radius: 50%;
   background: linear-gradient(180deg, #FDD835 0%, var(--neon-orange) 45%, var(--neon-pink) 78%, var(--neon-magenta) 100%);
   opacity: 0.35;
@@ -70,6 +70,15 @@
     height: 80px;
     background: linear-gradient(180deg, rgba(255, 110, 39, 0.2), transparent);
     filter: blur(20px);
+  }
+}
+
+/* On mobile the hero is taller (stacked content), so anchor the sun
+   from the top to keep it behind the logo instead of behind the text. */
+@media (max-width: 768px) {
+  .hero-sun {
+    top: 30%;
+    bottom: auto;
   }
 }
 
