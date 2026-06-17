@@ -150,10 +150,14 @@
   width: clamp(280px, 45vw, 530px);
   height: auto;
   margin: 0 auto 16px;
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.55))
-          drop-shadow(0 0 11px rgba(255, 20, 147, 0.7))
-          drop-shadow(0 0 24px rgba(0, 229, 255, 0.55));
+  filter: var(--logo-glow-a);
+  transition: filter 1.6s ease-in-out;
   animation: hero-logo-float 6s ease-in-out infinite;
+
+  &.glow-a { filter: var(--logo-glow-a); }
+  &.glow-b { filter: var(--logo-glow-b); }
+  &.glow-c { filter: var(--logo-glow-c); }
+  &.glow-d { filter: var(--logo-glow-d); }
 }
 
 @keyframes hero-logo-float {
@@ -162,7 +166,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-logo { animation: none; }
+  .hero-logo { animation: none; transition: none; }
 }
 
 .hero-year {

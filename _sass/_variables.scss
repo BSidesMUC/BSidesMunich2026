@@ -23,6 +23,12 @@
   --glow-cyan: 0 0 12px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.15);
   --glow-magenta: 0 0 12px rgba(224, 64, 251, 0.4), 0 0 40px rgba(224, 64, 251, 0.15);
 
+  // Hero logo neon-glow palettes (cycled by main.js)
+  --logo-glow-a: drop-shadow(0 0 3px rgba(255, 255, 255, 0.55)) drop-shadow(0 0 11px rgba(255, 20, 147, 0.7)) drop-shadow(0 0 24px rgba(0, 229, 255, 0.55));
+  --logo-glow-b: drop-shadow(0 0 3px rgba(255, 255, 255, 0.55)) drop-shadow(0 0 11px rgba(255, 214, 0, 0.78)) drop-shadow(0 0 24px rgba(255, 110, 39, 0.5));
+  --logo-glow-c: drop-shadow(0 0 3px rgba(255, 255, 255, 0.55)) drop-shadow(0 0 11px rgba(0, 229, 255, 0.85)) drop-shadow(0 0 26px rgba(0, 229, 255, 0.45));
+  --logo-glow-d: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 9px rgba(255, 214, 0, 0.6)) drop-shadow(0 0 18px rgba(255, 20, 147, 0.6)) drop-shadow(0 0 28px rgba(224, 64, 251, 0.4));
+
   --gradient-miami: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
   --gradient-sunset: linear-gradient(180deg, var(--neon-yellow), var(--neon-orange), var(--neon-pink), var(--neon-magenta));
   --gradient-hot: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
