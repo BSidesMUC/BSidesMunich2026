@@ -27,6 +27,10 @@
 .page-content {
   padding: 60px 0 100px;
 
+  &--no-header {
+    padding-top: calc(var(--nav-height) + 48px);
+  }
+
   p {
     color: var(--text-secondary);
     line-height: 1.85;

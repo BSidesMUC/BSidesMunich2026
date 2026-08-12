@@ -19,15 +19,24 @@
   border: 0;
 }
 
-/* Ticket info box */
+/* Ticket info boxes */
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .ticket-info {
   background: var(--bg-card);
   border: 1px solid rgba(255, 20, 147, 0.1);
   border-radius: var(--border-radius);
   padding: 48px;
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
 
@@ -39,6 +48,10 @@
     right: 0;
     height: 2px;
     background: var(--gradient-miami);
+  }
+
+  .btn {
+    margin-top: auto;
   }
 }
 

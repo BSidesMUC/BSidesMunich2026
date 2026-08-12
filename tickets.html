@@ -1,17 +1,54 @@
 ---
 layout: page
 title: Tickets
-subtitle: Secure your spot at BSides Munich 2026.
+hide_header: true
 ---
 
-<div class="ticket-info fade-in">
-  <p class="section-label">Admission</p>
-  <div class="ticket-price">FREE</div>
-  <p class="ticket-note">
-    BSides Munich is and always has been a free community event.<br>
-    Registration is required to secure your spot.
-  </p>
-  <a href="#" class="btn btn-primary">Registration TBA</a>
+<div class="section-header" style="margin-bottom: 32px;">
+  <h2 class="section-title">Conference Day <span>tickets</span></h2>
+  <p class="section-subtitle">Same conference — choose free community registration or support us with a Business Ticket.</p>
+</div>
+
+<div class="ticket-grid">
+  <div class="ticket-info fade-in">
+    <p class="section-label">Business Ticket</p>
+    <div class="ticket-price">&euro;595</div>
+    <p class="ticket-note">
+      Give back and help keep BSides Munich free for the community. Ideal with company funding or a professional development budget.<br>
+      Includes a BSides Munich 2026 T-shirt. Workshops not included. VAT included.<br>
+      Limited number available.
+    </p>
+    <a href="https://pretix.eu/bsidesmunich/2026/4948836/" class="btn btn-primary" target="_blank" rel="noopener">Buy Business Ticket</a>
+  </div>
+
+  <div class="ticket-info fade-in">
+    <p class="section-label">Community Ticket</p>
+    <div class="ticket-price">FREE</div>
+    <p class="ticket-note">
+      BSides Munich is and always has been a free community event.<br>
+      Registration is required to secure your spot.
+    </p>
+    <a href="#" class="btn btn-primary">Registration TBA</a>
+  </div>
+</div>
+
+<div class="neon-divider"></div>
+
+<div class="section-header" style="margin-bottom: 32px;">
+  <h2 class="section-title">Workshop <span>tickets</span></h2>
+  <p class="section-subtitle">Hands-on sessions on {{ site.workshop_date }} — separate registration, coming soon.</p>
+</div>
+
+<div class="ticket-grid" style="max-width: 480px;">
+  <div class="ticket-info fade-in">
+    <p class="section-label">Workshop Ticket</p>
+    <div class="ticket-price">TBA</div>
+    <p class="ticket-note">
+      Separate registration required.<br>
+      Spots are limited — register early once tickets open.
+    </p>
+    <a href="#" class="btn btn-primary">Registration TBA</a>
+  </div>
 </div>
 
 <div class="neon-divider"></div>
@@ -24,7 +61,7 @@ subtitle: Secure your spot at BSides Munich 2026.
     <li>Workshops are on <strong style="color: var(--text-primary);">{{ site.workshop_date }}</strong></li>
     <li>The conference day is <strong style="color: var(--text-primary);">{{ site.conference_date }}</strong></li>
     <li>All talks are in <strong style="color: var(--text-primary);">English</strong></li>
-    <li>Workshop and conference spots are limited - register early</li>
+    <li>Workshop and conference spots are limited — register early</li>
     <li>Lunch and coffee breaks are provided</li>
     <li>Join our <a href="{{ site.discord }}" target="_blank">Discord</a> for registration announcements</li>
   </ul>
