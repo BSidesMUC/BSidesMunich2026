@@ -189,18 +189,49 @@
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  max-width: 580px;
-  margin: 0 auto 40px;
-  line-height: 1.8;
+  max-width: 540px;
+  margin: 0 auto 34px;
+  line-height: 1.7;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
+.hero-scroll-cue {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.82;
+
+  &:hover {
+    color: var(--neon-pink);
+    opacity: 1;
+  }
+}
+
+.hero-scroll-arrow {
+  width: 18px;
+  height: 18px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  animation: scroll-cue 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-cue {
+  0%, 100% { transform: translateY(0) rotate(45deg); opacity: 0.45; }
+  50% { transform: translateY(6px) rotate(45deg); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-arrow { animation: none; }
 }
 
 .btn {

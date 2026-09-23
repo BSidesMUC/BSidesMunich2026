@@ -22,12 +22,90 @@ layout: default
       The premiere, independently organized computer security event in the Munich area.
       Bringing together local and internationally renowned experts since 2017.
     </p>
-    <div class="hero-actions">
-      <a href="{{ '/tickets' | relative_url }}" class="btn btn-primary">./get_tickets</a>
-      <a href="{{ '/cfp' | relative_url }}" class="btn btn-outline">./submit_talk</a>
-    </div>
+    <a class="hero-scroll-cue" href="#latest-updates" aria-label="Scroll to latest updates">
+      <span>latest updates</span>
+      <span class="hero-scroll-arrow" aria-hidden="true"></span>
+    </a>
   </div>
 </section>
+
+<section class="section updates-section" id="latest-updates" aria-labelledby="updates-title">
+  <div class="container">
+    <div class="section-header updates-header">
+      <div>
+        <p class="section-label">$ tail -n 3 ./updates.log</p>
+        <h2 class="section-title" id="updates-title">latest <span>updates</span></h2>
+        <p class="section-subtitle">Tickets, program news, and everything you need to know before the event.</p>
+      </div>
+      <a class="updates-all-link" href="https://social.bsidesmunich.org/" target="_blank" rel="noopener">
+        View all updates <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+
+    <div class="updates-layout">
+      <div class="news-grid" id="newsGrid" aria-live="polite" aria-busy="true">
+        <article class="news-card news-card--loading">
+          <p class="news-meta">LOADING</p>
+          <h3 class="news-title">Fetching latest updates<span class="cursor-blink"></span></h3>
+        </article>
+      </div>
+
+      <aside class="dates-panel" aria-labelledby="dates-title">
+        <p class="dates-kicker">// mark_your_calendar</p>
+        <h3 class="dates-title" id="dates-title">Important Dates</h3>
+        <ol class="dates-list">
+          <li class="date-item date-item--soon">
+            <div class="date-badge" aria-hidden="true">
+              <span class="date-day date-day--word">SOON</span>
+            </div>
+            <div>
+              <span class="date-status">Coming soon</span>
+              <strong>Workshop Tickets</strong>
+              <span>Registration will open soon</span>
+            </div>
+          </li>
+          <li class="date-item date-item--next">
+            <time datetime="2026-10-10T10:00:00+02:00">
+              <span class="date-day">10</span>
+              <span class="date-month">OCT</span>
+            </time>
+            <div>
+              <span class="date-status">Next up</span>
+              <strong>Ticket Drop #2</strong>
+              <span>10:00 CEST</span>
+            </div>
+          </li>
+          <li class="date-item">
+            <time datetime="2026-11-07">
+              <span class="date-day">07</span>
+              <span class="date-month">NOV</span>
+            </time>
+            <div>
+              <strong>Workshop Day</strong>
+              <span>Hochschule M&uuml;nchen</span>
+            </div>
+          </li>
+          <li class="date-item">
+            <time datetime="2026-11-09">
+              <span class="date-day">09</span>
+              <span class="date-month">NOV</span>
+            </time>
+            <div>
+              <strong>Conference Day</strong>
+              <span>The Westin Grand Munich</span>
+            </div>
+          </li>
+        </ol>
+      </aside>
+    </div>
+
+    <noscript>
+      <p class="updates-fallback">JavaScript is disabled. Find all current news on the <a href="https://social.bsidesmunich.org/">BSides Munich Social Feed</a>.</p>
+    </noscript>
+  </div>
+</section>
+
+<div class="container"><div class="neon-divider"></div></div>
 
 <section class="section">
   <div class="container">
