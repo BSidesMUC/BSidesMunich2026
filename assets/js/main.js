@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const newsGrid = document.getElementById('newsGrid');
   if (newsGrid) {
-    const feedUrl = 'https://social.bsidesmunich.org/wp-json/wp/v2/posts?per_page=3&_fields=date,link,title,excerpt';
+    const feedUrl = 'https://social.bsidesmunich.org/wp-json/wp/v2/posts?per_page=6&_fields=date,link,title,excerpt';
     const categoryFor = (title, excerpt) => {
       const text = `${title} ${excerpt}`.toLowerCase();
       if (text.includes('ticket')) return 'Tickets';
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const renderPosts = (posts) => {
       newsGrid.replaceChildren();
-      posts.forEach((post, index) => {
+      posts.slice(0, 3).forEach((post, index) => {
         const title = plainText(post.title.rendered);
         const excerpt = plainText(post.excerpt.rendered);
         const date = new Date(post.date);
@@ -93,6 +93,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       newsGrid.setAttribute('aria-busy', 'false');
     };
+    const renderHeroUpdate = (posts) => {
+      const heroLatest = document.getElementById('heroLatest');
+      const heroLatestTitle = document.getElementById('heroLatestTitle');
+      if (!heroLatest || !heroLatestTitle) return;
+
+      const priorityPost = posts.find(post => {
+        const title = plainText(post.title.rendered).toLowerCase();
+        return !title.includes('sponsor') && !title.includes('thank you');
+      }) || posts[0];
+
+      if (priorityPost) {
+        heroLatest.href = priorityPost.link;
+        heroLatest.target = '_blank';
+        heroLatest.rel = 'noopener';
+        heroLatestTitle.textContent = plainText(priorityPost.title.rendered);
+      }
+    };
     const renderFeedError = () => {
       newsGrid.innerHTML = '';
       const article = document.createElement('article');
@@ -119,7 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!response.ok) throw new Error(`Feed request failed: ${response.status}`);
         return response.json();
       })
-      .then(posts => posts.length ? renderPosts(posts) : renderFeedError())
+      .then(posts => {
+        if (!posts.length) {
+          renderFeedError();
+          return;
+        }
+        renderHeroUpdate(posts);
+        renderPosts(posts);
+      })
       .catch(renderFeedError);
   }
 
