@@ -1,104 +1,295 @@
-.agenda-track {
-  margin-bottom: 60px;
+.agenda-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+
+  @media (max-width: 650px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.agenda-day-nav {
+  position: sticky;
+  top: calc(var(--nav-height) + 12px);
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 8px;
+  margin-bottom: 56px;
+  background: rgba(11, 11, 26, 0.9);
+  border: 1px solid rgba(0, 229, 255, 0.12);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(14px);
+
+  a {
+    padding: 12px 18px;
+    border-radius: var(--border-radius-sm);
+    color: var(--neon-cyan);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background: rgba(0, 229, 255, 0.06);
+    }
+  }
+
+  span {
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-left: 6px;
+  }
+}
+
+.agenda-day {
+  margin-bottom: 88px;
+  scroll-margin-top: calc(var(--nav-height) + 100px);
 }
 
 .track-header {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.12);
+}
+
+.track-header--conference {
+  border-bottom-color: rgba(255, 20, 147, 0.14);
 }
 
 .track-dot {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: var(--neon-cyan);
   box-shadow: var(--glow-cyan);
   flex-shrink: 0;
 
-  &.pink { background: var(--neon-pink); box-shadow: var(--glow-pink); }
+  &.pink {
+    background: var(--neon-pink);
+    box-shadow: var(--glow-pink);
+  }
+}
+
+.agenda-day-label {
+  color: var(--neon-pink);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .track-name {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .track-meta {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
   color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
 }
 
-.agenda-timeline {
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.workshop-card {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-.agenda-item {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 20px;
-  padding: 16px 20px;
+  min-height: 220px;
+  padding: 24px;
   background: var(--bg-card);
-  border: 1px solid rgba(0, 229, 255, 0.04);
+  border: 1px solid rgba(0, 229, 255, 0.08);
+  border-left: 2px solid var(--neon-cyan);
   border-radius: var(--border-radius);
-  transition: all 0.2s ease;
-  align-items: center;
-  border-left: 2px solid transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   &:hover {
-    border-left-color: var(--neon-pink);
+    color: var(--text-primary);
     background: var(--bg-card-hover);
+    border-color: rgba(255, 20, 147, 0.35);
+    border-left-color: var(--neon-pink);
+    transform: translateY(-2px);
   }
 
-  &.break {
-    background: transparent;
-    border: 1px dashed rgba(255, 255, 255, 0.04);
-    border-left: 2px solid transparent;
-    opacity: 0.5;
-
-    &:hover {
-      opacity: 0.7;
-      border-left-color: transparent;
-    }
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin: 18px 0 10px;
   }
 
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    gap: 6px;
+  p {
+    color: var(--neon-pink);
+    font-size: 0.86rem;
   }
 }
 
-.agenda-time {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+.workshop-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
   color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+
+  span {
+    color: var(--text-muted);
+  }
+}
+
+.session-link {
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.conference-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.conference-heading,
+.conference-row {
+  display: grid;
+  grid-template-columns: 120px repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.conference-heading {
+  padding: 0 12px 8px;
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.conference-time {
+  padding: 20px 12px;
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   white-space: nowrap;
 }
 
-.agenda-details {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.agenda-title {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 1rem;
+.conference-session {
+  position: relative;
+  display: block;
+  min-height: 142px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 20, 147, 0.07);
+  border-radius: var(--border-radius);
   color: var(--text-primary);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    color: var(--text-primary);
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 20, 147, 0.3);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    line-height: 1.42;
+    margin: 9px 0;
+  }
+
+  p {
+    color: var(--neon-pink);
+    font-size: 0.8rem;
+  }
 }
 
-.agenda-speaker {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--neon-pink);
+.session-room {
+  display: none;
+  color: var(--neon-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rookie-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  color: var(--bg-primary);
+  background: var(--neon-yellow);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.conference-gap {
+  height: 18px;
+  border-left: 1px dashed rgba(0, 229, 255, 0.14);
+  margin-left: 59px;
+}
+
+.agenda-note {
+  padding: 18px 20px;
+  color: var(--text-muted);
+  background: rgba(18, 17, 42, 0.55);
+  border-radius: var(--border-radius);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .conference-heading {
+    display: none;
+  }
+
+  .conference-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .conference-time {
+    padding: 0 2px 2px;
+  }
+
+  .conference-session {
+    min-height: 0;
+  }
+
+  .session-room {
+    display: inline-block;
+  }
+
+  .conference-gap {
+    display: none;
+  }
 }

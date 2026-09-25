@@ -1,0 +1,154 @@
+---
+workshops:
+- time: '09:00–13:00'
+  room: R0.004
+  title: A phishing trip with Fancy Bear - Let's analyze APT malware together!
+  speakers: Marius Genheimer & leonpang
+  code: MUBLDN
+- time: '09:00–13:00'
+  room: R0.006
+  title: 'Level Up Your CI/CD: Building a secure pipeline with OSS'
+  speakers: Andoni Alonso & Pedro Martín
+  code: KKNQ3M
+- time: '09:00–13:00'
+  room: R0.007
+  title: 'From Checkbox to Evidence: A Hands-On NIS-2 Assessment for a Fictional SME'
+  speakers: Younes Ahmadzei
+  code: 7CLDS8
+- time: '09:00–13:00'
+  room: R1.005
+  title: 'LLM Security Hands-On: Attacking and Defending AI-Powered Applications'
+  speakers: Moritz Krause
+  code: PTU9TZ
+- time: '09:00–17:00'
+  room: R1.006
+  title: Hack the Vault, Save the Conference
+  speakers: Van Schandevijl Wouter
+  code: 99JLML
+- time: '09:00–17:00'
+  room: R1.007
+  title: The Art of Practical Threat Modelling
+  speakers: Ralph Andalis
+  code: BRNBXA
+- time: '09:00–17:00'
+  room: R1.008
+  title: Linux Security and Isolation APIs essentials
+  speakers: Michael Kerrisk
+  code: 89HQSJ
+- time: 14:00–18:00
+  room: R0.004
+  title: ANALYZE & HUNT DPRK ATTACKS
+  speakers: RAKESH KRISHNAN
+  code: 9TQD99
+- time: 14:00–18:00
+  room: R0.006
+  title: Exploiting .NET Remoting services
+  speakers: Hans-Martin Münch
+  code: AJHKCN
+- time: 14:00–18:00
+  room: R0.007
+  title: 'Poisoned at the Source: Hacking the Software Supply Chain in Your CI/CD
+    Pipeline'
+  speakers: Daniel Schwendner
+  code: XGXC7D
+- time: 14:00–18:00
+  room: R1.005
+  title: Using Deception to Halt Agentic AI Attacks
+  speakers: John Strand
+  code: GDJPXS
+conference:
+- time: 10:00–10:30
+  partenkirchen:
+    title: 'The Trouble with Tensors: Securing Tensor Serialization'
+    speakers: Gregor Ziegltrum
+    code: FAR3JA
+  munich:
+    title: 'Keyless Entry: Hacking SwitchBot Smartlocks'
+    speakers: Tobias Madl
+    code: 7KW3JE
+- time: 10:30–11:00
+  partenkirchen:
+    title: Warned or Vulnerable? Reliability of Anti-Stalking Alerts for Commercial
+      BLE Trackers
+    speakers: Larissa
+    code: FELFWN
+  munich:
+    title: 'You have no fuzzer here: Fuzzing automotive firmware in exotic environments'
+    speakers: Reza Zamiri
+    code: GRSPYJ
+- time: 11:30–12:00
+  partenkirchen:
+    title: 'The Agents of Chaos: AI Driven Malware Generation'
+    speakers: Arad Donenfeld
+    code: EKQSDM
+  munich:
+    title: 'Infected Drones: How Compromised Autonomous Systems Pwn Ground Control
+      Stations'
+    speakers: Nick Aleks
+    code: X9QZUA
+- time: 12:00–12:30
+  partenkirchen:
+    title: Symbolic Execution for Embedded Binaries
+    speakers: Ahmed Abdelrazek
+    code: AKSBVN
+  munich:
+    title: Who Does the AI Actually Cite? Auditing and Poisoning Zero-Click Search.
+    speakers: Yuen Ying Ng
+    code: 3FF8NM
+- time: 12:30–13:00
+  partenkirchen:
+    title: The Illusion of Finishability
+    speakers: Juliane Reimann
+    code: CCTQQR
+  munich:
+    title: Discovering 0-Days in HTML-to-PDF Generators (40 Million Monthly Targets)
+    speakers: Pedro Cruz
+    code: XHX7KN
+- time: 14:00–14:30
+  partenkirchen:
+    title: 'Escaping Tiered SOC Operations: A Role-Based Model for Modern SOCs'
+    speakers: Maiwand Hamidi
+    code: 8TYJ9M
+  munich:
+    title: Iranopasmigirim - Unmasking an Ever-evolving GitHub-Hosted Espionage Campaign
+      Against Iranian Dissidents
+    speakers: Evgen Blohm
+    code: YSMHTR
+- time: 14:30–15:00
+  partenkirchen:
+    title: 'Beyond the Checkbox: Can Your NIS-2 Evidence Survive Reality?'
+    speakers: Younes Ahmadzei
+    code: YVSF7Z
+  munich:
+    title: 'From RFCs to Seeds: LLM-Driven Seed Generation for Network Protocol Fuzzing'
+    speakers: saif
+    code: MABVKX
+- time: 15:30–16:00
+  partenkirchen:
+    title: 'The Negotiation You Never Logged: Making PQC State Visible in Production'
+    speakers: Dilroop Ummar Shameem
+    code: A9NSZW
+    rookie: true
+  munich:
+    title: Teaching AI to hack Joomla so I can skip my homework
+    speakers: vurlo
+    code: KNYLHV
+    rookie: true
+- time: 16:00–16:30
+  partenkirchen:
+    title: Phishing for Passkeys - An Analysis of WebAuthn and CTAP
+    speakers: Michael Kuckuk
+    code: JPHN3B
+  munich:
+    title: 'Balanced Attack Modeling: Connecting ATT&CK to Create Actionable Paths'
+    speakers: Amelie
+    code: BPFZJK
+- time: 16:50–17:20
+  partenkirchen:
+    title: 'Your Perimeter Is Already Dead: Zero Trust with Keycloak and SPIFFE'
+    speakers: Michael Fuchs
+    code: C7A8G7
+  munich:
+    title: Teaching Old Dogs New Tricks
+    speakers: Jonathan Prince
+    code: LYRARW

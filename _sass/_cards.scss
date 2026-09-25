@@ -1,16 +1,31 @@
 /* Speaker Cards */
+.speakers-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 44px;
+  color: var(--text-secondary);
+
+  @media (max-width: 650px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 .speaker-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 20px;
 }
 
 .speaker-card {
+  display: flex;
+  flex-direction: column;
   background: var(--bg-card);
   border: 1px solid rgba(0, 229, 255, 0.06);
   border-radius: var(--border-radius);
   padding: 28px 24px;
-  text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -36,11 +51,22 @@
   }
 }
 
+.speaker-profile-link {
+  color: var(--text-primary);
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--neon-cyan);
+    text-shadow: none;
+  }
+}
+
 .speaker-avatar {
-  width: 80px;
-  height: 80px;
+  width: 104px;
+  height: 104px;
   border-radius: 50%;
-  margin: 0 auto 16px;
+  margin: 0 auto 18px;
   background: var(--gradient-sunset);
   display: flex;
   align-items: center;
@@ -63,10 +89,17 @@
   }
 }
 
+.speaker-avatar--image {
+  display: block;
+  object-fit: cover;
+  border: 2px solid rgba(0, 229, 255, 0.22);
+  background: var(--bg-card-hover);
+}
+
 .speaker-name {
   font-family: var(--font-display);
   font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   color: var(--text-primary);
   text-align: center;
 }
@@ -75,14 +108,52 @@
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.65;
   text-align: center;
-  margin: 0 auto;
-  max-width: 34ch;
+  margin: 0 auto 22px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.speaker-sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 229, 255, 0.08);
+
+  a {
+    color: var(--text-primary);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--neon-cyan);
+      text-shadow: none;
+    }
+  }
+
+  span {
+    display: block;
+    color: var(--neon-pink);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.07em;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+}
+
+.speakers-note {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin-top: 44px;
+  text-align: center;
 }
 
 /* Organizer Cards */

@@ -1,0 +1,455 @@
+[
+  {
+    "code": "AWY9PG",
+    "name": "Ahmed Abdelrazek",
+    "avatar": "https://pretalx.com/media/avatars/W9JDRH_ZTTPsZ0.webp",
+    "biography": "Ahmed holds an M.Sc. in Computer Science (IT Security and Reliability) from the University of Passau, where his thesis focused on hybrid symbolic-execution-and-fuzzing techniques for embedded firmware. He worked on NXP Semiconductors' Vulnerability Analysis Team in Hamburg, developing concolic execution engines, AFL++-based fuzzing pipelines, and taint analysis tooling for ARM and RISC-V firmware, and is now focused on vulnerability research.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/AWY9PG/",
+    "sessions": [
+      {
+        "title": "Symbolic Execution for Embedded Binaries",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/AKSBVN/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "QWVJA7",
+    "name": "Amelie",
+    "avatar": null,
+    "biography": "Amelie is a student at FAU Erlangen-Nürnberg who deals with data-driven approaches to attack modeling.  She has some hands-on experience as a working student supporting incident response and forensics.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/QWVJA7/",
+    "sessions": [
+      {
+        "title": "Balanced Attack Modeling: Connecting ATT&CK to Create Actionable Paths",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/BPFZJK/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "9RQ3EY",
+    "name": "Andoni Alonso",
+    "avatar": "https://pretalx.com/media/avatars/UKFTUX_QOB5bYN.webp",
+    "biography": "Co-creator of unicrons.cloud, sharing cloud security knowledge with the community. Started as a sysadmin, evolved into SRE, and a few years ago crossed over to Security. Running and playing padel when I'm out of tokens.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/9RQ3EY/",
+    "sessions": [
+      {
+        "title": "Level Up Your CI/CD: Building a secure pipeline with OSS",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/KKNQ3M/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "DDNGXE",
+    "name": "Arad Donenfeld",
+    "avatar": "https://pretalx.com/media/avatars/E89977_ovYFSLF.webp",
+    "biography": "Arad Donenfeld is an attacks and exploits developer in SafeBreach, and has a background in security research from several roles. With his strong foundations of development, security, and operating systems internals, Arad develops tools for offensive operations, detection methods, and workflow automation. Arad focuses on practical techniques to identify and manipulate vulnerabilities and breaches, while testing and improving defenses across broad environments.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/DDNGXE/",
+    "sessions": [
+      {
+        "title": "The Agents of Chaos: AI Driven Malware Generation",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/EKQSDM/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "PGBPXP",
+    "name": "Daniel Schwendner",
+    "avatar": "https://pretalx.com/media/avatars/ZCJEBB_hPvRU2Q.webp",
+    "biography": "Daniel Schwendner is a Cyber Security Specialist and former DevOps Engineer with a strong passion for Cyber Security. With a background in mobile application security and hardware security, he participates in bug bounty hunting and shares his security knowledge online.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/PGBPXP/",
+    "sessions": [
+      {
+        "title": "Poisoned at the Source: Hacking the Software Supply Chain in Your CI/CD Pipeline",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/XGXC7D/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "BB7AJF",
+    "name": "Dilroop Ummar Shameem",
+    "avatar": null,
+    "biography": "I’m a Systems & Cryptography Engineer with a background in Political Science and Esports, which shaped my research mindset. I started as a Python backend engineer working with Django, APIs, and application architecture, then gradually shifted toward security, systems, and cryptography to understand how software behaves beneath the surface. Today, I work mainly with Rust, along Python with and C++, focusing on protocol experiments, cryptography, and security-oriented systems.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/BB7AJF/",
+    "sessions": [
+      {
+        "title": "The Negotiation You Never Logged: Making PQC State Visible in Production",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/A9NSZW/",
+        "type": "Talks - Rookie"
+      }
+    ]
+  },
+  {
+    "code": "AX9KWH",
+    "name": "Evgen Blohm",
+    "avatar": "https://pretalx.com/media/avatars/PQML9Q_NdEn9o4.webp",
+    "biography": "Evgen Blohm is an experienced DFIR expert who has been involved in responding to a large number of cyber incidents. He is based in Hamburg, Germany and is currently working for InfoGuard AG, where he is also supporting customers with compromise assessments and dark web monitoring.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/AX9KWH/",
+    "sessions": [
+      {
+        "title": "Iranopasmigirim - Unmasking an Ever-evolving GitHub-Hosted Espionage Campaign Against Iranian Dissidents",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/YSMHTR/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "RDSPVA",
+    "name": "Gregor Ziegltrum",
+    "avatar": "https://pretalx.com/media/avatars/XDQLHT_6ISMWvl.webp",
+    "biography": "Gregor Ziegltrum is a Senior Consultant at TNG Technology Consulting, specializing in innovative AI solutions. His work spans building agentic systems, as well as benchmarking, training, and fine-tuning Large Language Models. Beyond project work, Gregor shares his expertise through talks and internal trainings on Python best practices and deep dives into quirky language features. Before joining TNG, he earned both his Bachelor’s and Master’s degrees in Informatics from TU Munich, where he developed a strong passion for Data, AI, and High-Performance Computing.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/RDSPVA/",
+    "sessions": [
+      {
+        "title": "The Trouble with Tensors: Securing Tensor Serialization",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/FAR3JA/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "3TS8CX",
+    "name": "Hans-Martin Münch",
+    "avatar": "https://pretalx.com/media/avatars/Y3AYKX_8OKTXQL.webp",
+    "biography": "Hans-Martin is CEO of MOGWAI LABS, a small cyber security outfit from Neu-Ulm.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/3TS8CX/",
+    "sessions": [
+      {
+        "title": "Exploiting .NET Remoting services",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/AJHKCN/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "MR8GGD",
+    "name": "John Strand",
+    "avatar": null,
+    "biography": "John Strand has both consulted and taught hundreds of organizations in the areas of security, regulatory compliance, and penetration testing.  He is a coveted speaker and much loved SANS teacher. John is a contributor to the industry-shaping Penetration Testing Execution Standard and 20 Critical Controls frameworks.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/MR8GGD/",
+    "sessions": [
+      {
+        "title": "Using Deception to Halt Agentic AI Attacks",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/GDJPXS/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "97STBM",
+    "name": "Jonathan Prince",
+    "avatar": "https://pretalx.com/media/avatars/YHQBDV_dAdcHTs.webp",
+    "biography": "Jonathan spends a large proportion of his time breaking the things enterprises trust most but understand least. He specialises in IBM z/OS and IBM i security, not because it's fashionable, but because someone has to, and the systems running your bank's core transactions deserves more than a checkbox audit.\nHe analyses authorization models, maps privilege escalation paths, and explains to enterprises why their carefully designed access controls are actually a roadmap for attackers. At home he runs a lab that includes two AS/400s and enough enterprise equipment to make most corporate IT departments uncomfortable, because the best way to understand how to break something is to pwn one.\nHis current research applies modern offensive security methodology to platforms the industry forgot to threat-model, and demonstrates that the gap between a compromised AD account and privileged access on a mainframe may be smaller, and more traversable, than anyone in your SOC wants to hear.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/97STBM/",
+    "sessions": [
+      {
+        "title": "Teaching Old Dogs New Tricks",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/LYRARW/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "DVNH9C",
+    "name": "Juliane Reimann",
+    "avatar": null,
+    "biography": "Juliane Reimann is a Founder & Security Community Expert @ FullCyrcle Security. She works as cyber security consultant for large companies since 2019 with focus on DevSecOps and Community Building. Her expertise includes building security communities of software developers and establishing developer centric communication about secure software development topics. Before going into the field of Cyber Security she founded different companies in the area of web development. Due to her background in web development she has extensive knowledge of the software development life cycle. Since 2024 she is a core member of the OWASP Security Champions Guide Community.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/DVNH9C/",
+    "sessions": [
+      {
+        "title": "The Illusion of Finishability",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/CCTQQR/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "GRXWCT",
+    "name": "Larissa",
+    "avatar": "https://pretalx.com/media/avatars/MPYU7Z_TCi5C2V.webp",
+    "biography": "I work as a Cyber Strategy & Architecture Consultant and originally moved to Munich to complete my Master’s degree in IT Security. Then I decided to stay because of the beautiful city and its surroundings. Professionally, I am passionate about cybersecurity, with a particular interest in privacy topics. In my free time, I enjoy taking advantage of the nearby nature through climbing, cycling, and hiking.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/GRXWCT/",
+    "sessions": [
+      {
+        "title": "Warned or Vulnerable? Reliability of Anti-Stalking Alerts for Commercial BLE Trackers",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/FELFWN/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "PN9JXP",
+    "name": "leonpang",
+    "avatar": null,
+    "biography": "",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/PN9JXP/",
+    "sessions": [
+      {
+        "title": "A phishing trip with Fancy Bear - Let's analyze APT malware together!",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/MUBLDN/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "USKVTK",
+    "name": "Maiwand Hamidi",
+    "avatar": "https://pretalx.com/media/avatars/QRMVRX_BtugMbZ.webp",
+    "biography": "Maiwand Hamidi is 29 years old and lives in Switzerland. He earned his master’s degree in IT security from Munich University of Applied Sciences.\nIn Switzerland, he works as a Senior Security Analyst at an IT service provider focused on the financial sector in a 24/7 SOC. There, he regularly encounters interesting cases that he would like to share with the community. Working in various roles (Incident Response, Detection Analyst, Threat Intelligence Analyst) in his current position has given him a broad range of experience.\n\nOver the past few years, he has gained experience in cyber defense at a wide range of companies (PwC, Siemens, IBM, NTT DATA). His focus has been particularly on advising SOCs regarding incident response, threat intelligence, and organizational structure. Beside that he’s serving as a Vice Chair of the FIRST SOC SIG since July 26.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/USKVTK/",
+    "sessions": [
+      {
+        "title": "Escaping Tiered SOC Operations: A Role-Based Model for Modern SOCs",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/8TYJ9M/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "ZGGUKK",
+    "name": "Marius Genheimer",
+    "avatar": "https://pretalx.com/media/avatars/N7GJYD_59G862y.webp",
+    "biography": "Marius Genheimer is a DFIR Specialist and Threat Researcher with the SECUINFRA Falcon Team. He specializes in malware analysis and defensive security training.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/ZGGUKK/",
+    "sessions": [
+      {
+        "title": "A phishing trip with Fancy Bear - Let's analyze APT malware together!",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/MUBLDN/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "ZSCTBA",
+    "name": "Michael Fuchs",
+    "avatar": "https://pretalx.com/media/avatars/7VELMA_KfmeTw2.webp",
+    "biography": "Michael Fuchs is a Software Security Engineer at inovex with a focus on IT security. He supports development projects from the concept phase through implementation and advises teams on DevSecOps strategies, working in particular on strong authentication, security in microservices architectures, and Zero Trust. With coding assistants now part of nearly every developer's toolkit, he looks at what their adoption means for the security practices these teams rely on.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/ZSCTBA/",
+    "sessions": [
+      {
+        "title": "Your Perimeter Is Already Dead: Zero Trust with Keycloak and SPIFFE",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/C7A8G7/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "BNDWRE",
+    "name": "Michael Kerrisk",
+    "avatar": "https://pretalx.com/media/avatars/XRZ3WN_Axg1DlD.webp",
+    "biography": "Michael Kerrisk is a trainer, author, and programmer who has a passion for investigating and explaining software systems. He is the author of \"The Linux Programming Interface\", a widely acclaimed book on Linux (and UNIX) system programming. He has been actively involved in the Linux development community since 2000, operating mainly in the area of testing, design review, and documentation of kernel-user-space interfaces. From 2004 to 2021, he maintained the Linux \"man-pages\" project, which provides the primary documentation for Linux system calls and C library functions. Michael is a New Zealander, living in Munich, Germany, from where he operates a training business (man7.org) providing low-level Linux programming courses in Europe, North America, and occasionally further afield.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/BNDWRE/",
+    "sessions": [
+      {
+        "title": "Linux Security and Isolation APIs essentials",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/89HQSJ/",
+        "type": "Workshop (8h)"
+      }
+    ]
+  },
+  {
+    "code": "TSZBJ9",
+    "name": "Michael Kuckuk",
+    "avatar": "https://pretalx.com/media/avatars/EJZBSR_O0Vs0oo.webp",
+    "biography": "As a fullstack software developer, Michael's main expertise lies in simple software development. But since he is well aware that the happy path is the easy part, he's always had an interest for security and he's always been very security- and privacy-aware in his work. He enjoys developing user experiences that aren't just unobstructed by security, but that are improved because of it.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/TSZBJ9/",
+    "sessions": [
+      {
+        "title": "Phishing for Passkeys - An Analysis of WebAuthn and CTAP",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/JPHN3B/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "7UPUGA",
+    "name": "Moritz Krause",
+    "avatar": null,
+    "biography": "Security Engineer @ FullCyrcle Security\n\nMoritz Krause has been working in software development since 2010, with a strong focus on building and securing web applications. After completing a degree in computer science and working as a software engineer for many years, he shifted his focus toward cybersecurity in 2024. His current work centers on DevSecOps, backend development, AI security, and threat modeling. Combining deep technical expertise with a strong understanding of the secure software development lifecycle (SDLC), Moritz explores how AI can be leveraged to enhance security practices across modern development environments.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/7UPUGA/",
+    "sessions": [
+      {
+        "title": "LLM Security Hands-On: Attacking and Defending AI-Powered Applications",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/PTU9TZ/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "WH3BRE",
+    "name": "Nick Aleks",
+    "avatar": null,
+    "biography": "Nick Aleks is a renowned cybersecurity researcher, engineer and author of Black Hat Bash, and Black Hat GraphQL, (as well as the upcoming Drone Hacker's Handbook). Nick Aleks founded  ASEC (asec.io) a full-service offensive security firm and established DEFCON Toronto (DC416). He has spent over a decade spearheading cybersecurity initiatives at major financial institutions while also devoting more than a decade to mechanical engineering, robotics and drone hacking. Nick hosts Drone Hacking Workshops at DEFCON and authored numerous drone hacking tools - including Damn Vulnerable Drone, SiKW00F, and MAVSploit.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/WH3BRE/",
+    "sessions": [
+      {
+        "title": "Infected Drones: How Compromised Autonomous Systems Pwn Ground Control Stations",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/X9QZUA/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "ES3GGG",
+    "name": "Pedro Cruz",
+    "avatar": "https://pretalx.com/media/avatars/BJD3JG_F1DtRA2.webp",
+    "biography": "My name is Pedro Cruz, I'm graduated in Information Security from FATEC Ourinhos, with a focus on Offensive Security. In recent years I have devoted myself intensively to the study and practice of penetration testing, earning certifications such as OSCP+, DCPT (Desec Certified Penetration Tester), CHWI (Crowsec Hacking Web Initial), CRTO (Certified Red Team Operator), and gaining extensive knowledge.\n\nI currently work as an offensive security analyst, primarily performing penetration tests on web applications and infrastructure, and subsequently preparing detailed reports that describe the vulnerabilities and recommended mitigations.\n\nOutside of work, I am routinely engaged in independent security research in web applications and bug bounty programs (top 20 bug hunters in Brazil at HackerOne), continuously exploring new attack vectors and methodology to identify and report vulnerabilities.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/ES3GGG/",
+    "sessions": [
+      {
+        "title": "Discovering 0-Days in HTML-to-PDF Generators (40 Million Monthly Targets)",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/XHX7KN/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "AGSEZ8",
+    "name": "Pedro Martín",
+    "avatar": null,
+    "biography": "My day-to-day involves helping organizations keep their cloud environments secure and compliant with whatever regulations apply to them. It’s a field that never stops changing, and that’s part of what keeps me hooked.\n\nOutside of work, I like hiking in the mountains, flying drones, and tinkering with open source projects when I have the time.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/AGSEZ8/",
+    "sessions": [
+      {
+        "title": "Level Up Your CI/CD: Building a secure pipeline with OSS",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/KKNQ3M/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "9QQTYY",
+    "name": "RAKESH KRISHNAN",
+    "avatar": "https://pretalx.com/media/avatars/3SPL9S_Qtyf3gE.webp",
+    "biography": "I am **Rakesh Krishnan**, a Threat Intelligence Researcher and a regular contributor to the Infosec Community via Tweets and Investigation Blog Posts. I run a Threat Intelligence Blog named \"**THE RAVEN FILE**\" which purely focuses on Threat Intelligence Topics such as Dark Web, Ransomware Ecosystem, Scam Busting, Blockchain Analysis, etc. \n\nRecently, I infiltrated into **0APT Ransomware Group** and exposed their Modus Operandi on my latest blog post. I often expose the real IP Addresses of Ransomware Groups such as: **LockBit**, **Kairos**, etc repeatedly. 3 years back, I made it into the headlines of finding Offensive GPT Model titled \"FraudGPT\" which got a global recognition. \n\nI had conducted 2-Hour Workshop on **BSides Luxembourg** in May 2026. \n\nI had conducted a 3-Hour Dark Web Workshop for Conferences like:-  **Craccon** in **2025** and  at **IICON** in **2024** which were held in Delhi, India. \n\nThis year, I have been made into the list of **Contributor of the Year** by **ABUSECH** and **SPAMHAUS** for providing large number of **IOCs**, **Ransomware Samples** to the Platform, making a real impact in the Infosec Community by providing timely action for Defending the Threats.\n\nYou can read my Blog at: **theravenfile.com**",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/9QQTYY/",
+    "sessions": [
+      {
+        "title": "ANALYZE & HUNT DPRK ATTACKS",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/9TQD99/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "EQU9VY",
+    "name": "Ralph Andalis",
+    "avatar": "https://pretalx.com/media/avatars/8BUAGA_vpNEQ5Y.webp",
+    "biography": "Ralph is the Security Director of Gridlock Security (GridlockSec) - a company he founded that focuses on cybersecurity consulting services. He has 10 years experience in the industry as a Security Consultant/Pentester/Security Researcher for a few companies such as Microsoft, NCC Group, Hewlett-Packard (HP), Forward Security, and Ernst & Young (E&Y).\nHis expertise is mainly Web, Mobile, and Network Pentesting, Threat Modelling, Security Architecture Review, and Security Design Reviews. When he was a Senior Security Engineer at Microsoft, he dealt with security architecture reviews, security design reviews, threat modelling, security research, code reviews, and pentesting on the dedicated product he is directly working on with 100+ software engineers. The threat modelling practice he had daily done with his software engineers had helped secure the product and promoted a culture of secure coding and engineering of the said software.\n\nHe is also a major active contributor and a member of the working group for the OWASP Application Security Verification Standard (ASVS) project, making the standard better for fellow pentesters and developers alike.\n\nHe trained attendees at BSides Vancouver 2025, BSides Orlando 2025 and BSides Luxembourg 2026 for the workshop, \"Threat Modelling Starter Training\" which had been well received. He has presented his talk entitled, \"OWASP ASVS: A Methodical and Practical Approach to Application Security Testing\" on OWASP AppSec Pacific Northwest conference (PNW) 2024 in Vancouver, BC Canada. He has also presented a similar presentation aimed for beginners delivered online at HackStop Cybersecurity Summit 2024 held in Ljubljana, Slovenia.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/EQU9VY/",
+    "sessions": [
+      {
+        "title": "The Art of Practical Threat Modelling",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/BRNBXA/",
+        "type": "Workshop (8h)"
+      }
+    ]
+  },
+  {
+    "code": "CB8ZCW",
+    "name": "Reza Zamiri",
+    "avatar": "https://pretalx.com/media/avatars/CWT9HF_zVHhqt3.webp",
+    "biography": "Reza is a security researcher with a focus on the security of cyber-physical systems. He previously worked as a research assistant at the CISPA Helmholtz Center for Information Security and has spent the past several years working as a senior product security engineer in the automotive and industrial automation sectors. His interests include firmware security, fuzzing, reverse engineering, and securing safety-critical embedded systems.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/CB8ZCW/",
+    "sessions": [
+      {
+        "title": "You have no fuzzer here: Fuzzing automotive firmware in exotic environments",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/GRSPYJ/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "QY9XNR",
+    "name": "saif",
+    "avatar": "https://pretalx.com/media/avatars/XYWZGG_2Ht0RTu.webp",
+    "biography": "Saifeldin Mandour is a security researcher with strong interest in protocol analysis and fuzzing. He works as security analyst at Germany-based ERNW GmbH where he specializes on offensive techniques in complex environments. Saifeldin regularly gives talks at academic conferences like ACM SIGIR 2025 and at company-internal research workshops.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/QY9XNR/",
+    "sessions": [
+      {
+        "title": "From RFCs to Seeds: LLM-Driven Seed Generation for Network Protocol Fuzzing",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/MABVKX/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "WQ893N",
+    "name": "Tobias Madl",
+    "avatar": "https://pretalx.com/media/avatars/AQEF87_rug2CAQ.webp",
+    "biography": "Tobias Madl is one of the two board members of Neodyme AG,\nheadquartered in Garching near Munich. He holds a Master’s degree in\nApplied Research in Engineering Sciences, specializing in Automotive\nSecurity. Alongside his PhD studies at the Technical University of\nMunich, he worked at Fraunhofer AISEC, contributing to cutting-edge\nresearch in product and industrial security. As a founding member of\nthe nonprofit organization NFITS (Nachwuchsförderung IT-Sicherheit\ne.V.), Tobias is dedicated to promoting young talent in cybersecurity.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/WQ893N/",
+    "sessions": [
+      {
+        "title": "Keyless Entry: Hacking SwitchBot Smartlocks",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/7KW3JE/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "GL7WXD",
+    "name": "Van Schandevijl Wouter",
+    "avatar": null,
+    "biography": "A driven and flexible .NET generalist who has turned a childhood hobby into his career. As CTO and Competence Center lead at itenium, Wouter gives bi-weekly tech talks and hands-on workshops on a variety of subjects, mostly Frontend, Architecture, Security and, more recently, AI.\n\nHe is an architect, Scrum Master but most of all a developer and avid pingpong player. Interested in pretty much everything IT but especially excited about lean, software design, documentation, continuous integration and usability.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/GL7WXD/",
+    "sessions": [
+      {
+        "title": "Hack the Vault, Save the Conference",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/99JLML/",
+        "type": "Workshop (8h)"
+      }
+    ]
+  },
+  {
+    "code": "7VEE78",
+    "name": "vurlo",
+    "avatar": "https://pretalx.com/media/avatars/MXXM3C_IxMKbZ3.webp",
+    "biography": "I am Adrian Junge (vurlo). I started programming in school, and back then I could not have imagined how deep that rabbit hole would go. My first deeper technical interest was algorithms, competitive programming, and the occasional LeetCode problem. Over time that problem-solving curiosity pulled me further into cybersecurity. Today I study computer science at Karlsruhe Institute of Technology (KIT) with a focus on cybersecurity, work in applied computer science at FZI Forschungszentrum für Informatik, and play CTFs with my university team KITCTF. Lately, I have been digging deeper into bug bounty work, coordinated disclosure, and CVE hunting.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/7VEE78/",
+    "sessions": [
+      {
+        "title": "Teaching AI to hack Joomla so I can skip my homework",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/KNYLHV/",
+        "type": "Talks - Rookie"
+      }
+    ]
+  },
+  {
+    "code": "NK8TGA",
+    "name": "Younes Ahmadzei",
+    "avatar": "https://pretalx.com/media/avatars/CHVHRC_u8yLfgf.webp",
+    "biography": "Younes Ahmadzei is an Information Security Consultant focusing on practical NIS-2 implementation, evidence-based security assessments, and translating ISO/IEC 27001 and TISAX/VDA ISA structures into actionable improvements for SMEs.\n\nHis work on NIS-2 has included outreach to 1,800 German SMEs, 17 semi-structured interviews, and the development of a pragmatic self-assessment model. He has presented his findings at BSides Munich, Elbsides, and the BSI IT Security Congress. His current work also explores how local LLMs can support the analysis of ISMS documents and security evidence while keeping final assessment decisions with human experts.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/NK8TGA/",
+    "sessions": [
+      {
+        "title": "From Checkbox to Evidence: A Hands-On NIS-2 Assessment for a Fictional SME",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/7CLDS8/",
+        "type": "Workshop (4h)"
+      },
+      {
+        "title": "Beyond the Checkbox: Can Your NIS-2 Evidence Survive Reality?",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/YVSF7Z/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "W399XZ",
+    "name": "Yuen Ying Ng",
+    "avatar": "https://pretalx.com/media/avatars/LKRGD8_8vE2llZ.webp",
+    "biography": "Yuen Ying Ng (Ruth) is a Hong Kong–based incident responder and independent researcher specializing in campaign detection, digital forensics, security research, vulnerability research, threat hunting, and threat actor analysis.\n\nPrevious Speaking Experience:\n2026: JSAC2026 - Unmasking Houken: Advanced TTPs and Detection (Lightning Talk) (Ref: https://jsac.jpcert.or.jp/timetable.html)\n2025: Threat Analyst Summit 2025 (TAS'25) – Pump-and-Dump” Scheme Targeting the Securities Brokerage Industry (Ref: https://tas.teamt5.org/agenda2025/)\n2024: Threat Analyst Summit 2024 (TAS'24) – Ransomware's Uneven Playing Field : Re-Thinking Protection and Detection from Small Enterprises (Ref: https://tas.teamt5.org/agenda2024/)",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/W399XZ/",
+    "sessions": [
+      {
+        "title": "Who Does the AI Actually Cite? Auditing and Poisoning Zero-Click Search.",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/3FF8NM/",
+        "type": "Talk"
+      }
+    ]
+  }
+]

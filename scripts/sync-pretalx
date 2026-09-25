@@ -1,0 +1,191 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "json"
+require "net/http"
+require "optparse"
+require "tempfile"
+require "uri"
+require "yaml"
+
+EVENT = "bsides-munich-2026"
+EXPORT_URL = "https://pretalx.com/#{EVENT}/schedule/export/schedule.json"
+EXPECTED_TITLE = "BSides Munich 2026"
+WORKSHOP_DATE = "2026-11-07"
+CONFERENCE_DATE = "2026-11-09"
+WORKSHOP_ROOM_PREFIX = "Hochschule München - "
+CONFERENCE_ROOMS = {
+  "Westin - Partenkirchen" => "partenkirchen",
+  "Westin - Munich" => "munich"
+}.freeze
+
+options = { check: false, source: nil }
+OptionParser.new do |parser|
+  parser.banner = "Usage: scripts/sync-pretalx [--check] [--source FILE]"
+  parser.on("--check", "Validate and report changes without writing files") { options[:check] = true }
+  parser.on("--source FILE", "Use a local Pretalx export instead of downloading") { |file| options[:source] = file }
+end.parse!
+
+def abort_sync(message)
+  warn "Pretalx sync aborted: #{message}"
+  exit 2
+end
+
+def fetch_export(url)
+  uri = URI(url)
+  request = Net::HTTP::Get.new(uri)
+  request["User-Agent"] = "BSidesMunich2026 schedule sync"
+
+  response = Net::HTTP.start(
+    uri.host,
+    uri.port,
+    use_ssl: true,
+    open_timeout: 10,
+    read_timeout: 30
+  ) { |http| http.request(request) }
+
+  abort_sync("download failed with HTTP #{response.code}") unless response.is_a?(Net::HTTPSuccess)
+  response.body
+rescue StandardError => e
+  abort_sync("download failed: #{e.message}")
+end
+
+def sessions_for(day)
+  day.fetch("rooms").flat_map do |room, sessions|
+    sessions.map { |session| session.merge("source_room" => room) }
+  end
+end
+
+def pretalx_day(conference, date)
+  conference.fetch("days").find { |day| day["date"] == date } ||
+    abort_sync("expected schedule day #{date} is missing")
+end
+
+raw = options[:source] ? File.read(options[:source]) : fetch_export(EXPORT_URL)
+export = JSON.parse(raw)
+conference = export.dig("schedule", "conference") || abort_sync("conference data is missing")
+
+abort_sync("unexpected event acronym #{conference['acronym'].inspect}") unless conference["acronym"] == EVENT
+abort_sync("unexpected conference title #{conference['title'].inspect}") unless conference["title"] == EXPECTED_TITLE
+
+workshop_sessions = sessions_for(pretalx_day(conference, WORKSHOP_DATE))
+  .select { |session| session["track"] == "Workshops" }
+  .sort_by { |session| [session.fetch("start"), session.fetch("source_room"), session.fetch("title")] }
+
+conference_sessions = sessions_for(pretalx_day(conference, CONFERENCE_DATE))
+  .select { |session| session["track"] == "Talks" }
+
+abort_sync("no workshops found") if workshop_sessions.empty?
+abort_sync("no conference talks found") if conference_sessions.empty?
+
+unknown_rooms = conference_sessions.map { |session| session["source_room"] }.uniq - CONFERENCE_ROOMS.keys
+abort_sync("unknown conference room(s): #{unknown_rooms.join(', ')}") unless unknown_rooms.empty?
+
+all_sessions = workshop_sessions + conference_sessions
+sessions_without_people = all_sessions.select { |session| session.fetch("persons", []).empty? }
+unless sessions_without_people.empty?
+  abort_sync("sessions without speakers: #{sessions_without_people.map { |session| session['code'] }.join(', ')}")
+end
+
+agenda = {
+  "workshops" => workshop_sessions.map do |session|
+    {
+      "time" => "#{session.fetch('start')}–#{session.fetch('end')[11, 5]}",
+      "room" => session.fetch("source_room").delete_prefix(WORKSHOP_ROOM_PREFIX),
+      "title" => session.fetch("title"),
+      "speakers" => session.fetch("persons").map { |person| person.fetch("public_name") }.join(" & "),
+      "code" => session.fetch("code")
+    }
+  end,
+  "conference" => conference_sessions.group_by { |session| [session.fetch("start"), session.fetch("end")[11, 5]] }
+    .sort_by { |(start, _end), _sessions| start }
+    .map do |(start, finish), slot_sessions|
+      slot = { "time" => "#{start}–#{finish}" }
+      slot_sessions.each do |session|
+        room_key = CONFERENCE_ROOMS.fetch(session.fetch("source_room"))
+        abort_sync("duplicate session in #{room_key} at #{start}") if slot.key?(room_key)
+        slot[room_key] = {
+          "title" => session.fetch("title"),
+          "speakers" => session.fetch("persons").map { |person| person.fetch("public_name") }.join(" & "),
+          "code" => session.fetch("code")
+        }
+        slot[room_key]["rookie"] = true if session.fetch("type").include?("Rookie")
+      end
+      missing_rooms = CONFERENCE_ROOMS.values - slot.keys
+      abort_sync("missing room at #{start}: #{missing_rooms.join(', ')}") unless missing_rooms.empty?
+      slot
+    end
+}
+
+speaker_entries = all_sessions.flat_map do |session|
+  session.fetch("persons").map do |person|
+    {
+      "code" => person.fetch("code"),
+      "name" => person.fetch("public_name"),
+      "avatar" => person["avatar"],
+      "biography" => person["biography"] || "",
+      "profile_url" => person.fetch("url"),
+      "session" => {
+        "title" => session.fetch("title"),
+        "url" => session.fetch("url"),
+        "type" => session.fetch("type")
+      }
+    }
+  end
+end
+
+speakers = speaker_entries.group_by { |entry| entry.fetch("code") }.map do |code, entries|
+  %w[name avatar biography profile_url].each do |field|
+    variants = entries.map { |entry| entry[field] }.uniq
+    abort_sync("inconsistent #{field} for speaker #{code}") if variants.length > 1
+  end
+
+  first = entries.first
+  {
+    "code" => code,
+    "name" => first.fetch("name"),
+    "avatar" => first["avatar"],
+    "biography" => first.fetch("biography"),
+    "profile_url" => first.fetch("profile_url"),
+    "sessions" => entries.map { |entry| entry.fetch("session") }.uniq { |session| session.fetch("url") }
+  }
+end.sort_by { |speaker| speaker.fetch("name").downcase }
+
+duplicate_names = speakers.group_by { |speaker| speaker.fetch("name").downcase }.select { |_name, entries| entries.length > 1 }
+abort_sync("duplicate speaker names with different IDs: #{duplicate_names.keys.join(', ')}") unless duplicate_names.empty?
+
+agenda_output = "---\n#{YAML.dump(agenda).delete_prefix("---\n")}"
+speakers_output = "#{JSON.pretty_generate(speakers)}\n"
+
+root = File.expand_path("..", __dir__)
+outputs = {
+  File.join(root, "_data", "agenda.yml") => agenda_output,
+  File.join(root, "_data", "speakers.json") => speakers_output
+}
+
+changes = outputs.select { |path, content| !File.exist?(path) || File.read(path) != content }
+
+puts "Validated #{agenda['workshops'].length} workshops, #{conference_sessions.length} talks, and #{speakers.length} speakers."
+
+if options[:check]
+  if changes.empty?
+    puts "Local Pretalx data is up to date."
+    exit 0
+  end
+
+  warn "Pretalx data differs: #{changes.keys.map { |path| path.delete_prefix("#{root}/") }.join(', ')}"
+  exit 1
+end
+
+changes.each do |path, content|
+  directory = File.dirname(path)
+  Tempfile.create(["pretalx-sync", ".tmp"], directory) do |file|
+    file.write(content)
+    file.flush
+    file.fsync
+    File.rename(file.path, path)
+  end
+  puts "Updated #{path.delete_prefix("#{root}/")}"
+end
+
+puts "No data changes." if changes.empty?
