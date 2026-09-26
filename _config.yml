@@ -7,6 +7,9 @@ baseurl: ""
 discord: "https://discord.gg/RVWbAk5R6u"
 meetup: "https://www.meetup.com/MUC-SEC/"
 
+conference_tickets_url: "https://pretix.eu/bsidesmunich/2026/4948836/"
+workshop_tickets_url: "https://pretix.eu/bsidesmunich/2026/4948834/"
+
 workshop_date: "2026-11-07"
 workshop_venue: "Hochschule München"
 workshop_address: "Lothstraße 64, 80335 München"

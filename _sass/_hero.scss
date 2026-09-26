@@ -234,10 +234,17 @@
 }
 
 .hero-workshop-note {
+  display: block;
   color: var(--text-secondary);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   margin-bottom: 24px;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--neon-cyan);
+    text-shadow: none;
+  }
 
   span {
     color: var(--neon-pink);
