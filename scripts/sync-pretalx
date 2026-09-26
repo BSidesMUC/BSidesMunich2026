@@ -14,6 +14,9 @@ EXPECTED_TITLE = "BSides Munich 2026"
 WORKSHOP_DATE = "2026-11-07"
 CONFERENCE_DATE = "2026-11-09"
 WORKSHOP_ROOM_PREFIX = "Hochschule München - "
+WORKSHOP_BOOKING_STATUS = {
+  "BRNBXA" => "Not yet available for booking"
+}.freeze
 CONFERENCE_ROOMS = {
   "Westin - Partenkirchen" => "partenkirchen",
   "Westin - Munich" => "munich"
@@ -89,13 +92,16 @@ end
 
 agenda = {
   "workshops" => workshop_sessions.map do |session|
-    {
+    workshop = {
       "time" => "#{session.fetch('start')}–#{session.fetch('end')[11, 5]}",
       "room" => session.fetch("source_room").delete_prefix(WORKSHOP_ROOM_PREFIX),
       "title" => session.fetch("title"),
       "speakers" => session.fetch("persons").map { |person| person.fetch("public_name") }.join(" & "),
       "code" => session.fetch("code")
     }
+    status = WORKSHOP_BOOKING_STATUS[session.fetch("code")]
+    workshop["booking_status"] = status if status
+    workshop
   end,
   "conference" => conference_sessions.group_by { |session| [session.fetch("start"), session.fetch("end")[11, 5]] }
     .sort_by { |(start, _end), _sessions| start }

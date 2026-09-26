@@ -30,6 +30,7 @@ workshops:
   title: The Art of Practical Threat Modelling
   speakers: Ralph Andalis
   code: BRNBXA
+  booking_status: Not yet available for booking
 - time: '09:00–17:00'
   room: R1.008
   title: Linux Security and Isolation APIs essentials
