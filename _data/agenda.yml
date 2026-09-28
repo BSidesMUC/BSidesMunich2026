@@ -121,7 +121,7 @@ conference:
     code: YVSF7Z
   munich:
     title: 'From RFCs to Seeds: LLM-Driven Seed Generation for Network Protocol Fuzzing'
-    speakers: saif
+    speakers: Saifeldin Mandour
     code: MABVKX
 - time: 15:30–16:00
   partenkirchen:
