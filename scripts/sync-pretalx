@@ -17,6 +17,9 @@ WORKSHOP_ROOM_PREFIX = "Hochschule München - "
 WORKSHOP_BOOKING_STATUS = {
   "BRNBXA" => "Not yet available for booking"
 }.freeze
+CANCELED_SESSION_CODES = {
+  "XHX7KN" => "TBD"
+}.freeze
 CONFERENCE_ROOMS = {
   "Westin - Partenkirchen" => "partenkirchen",
   "Westin - Munich" => "munich"
@@ -77,6 +80,7 @@ workshop_sessions = sessions_for(pretalx_day(conference, WORKSHOP_DATE))
 
 conference_sessions = sessions_for(pretalx_day(conference, CONFERENCE_DATE))
   .select { |session| session["track"] == "Talks" }
+  .reject { |session| CANCELED_SESSION_CODES.key?(session.fetch("code")) }
 
 abort_sync("no workshops found") if workshop_sessions.empty?
 abort_sync("no conference talks found") if conference_sessions.empty?
@@ -116,6 +120,14 @@ agenda = {
           "code" => session.fetch("code")
         }
         slot[room_key]["rookie"] = true if session.fetch("type").include?("Rookie")
+      end
+      CANCELED_SESSION_CODES.each do |code, title|
+        canceled = sessions_for(pretalx_day(conference, CONFERENCE_DATE)).find { |session| session["code"] == code }
+        next unless canceled && canceled["start"] == start
+
+        room_key = CONFERENCE_ROOMS.fetch(canceled.fetch("source_room"))
+        abort_sync("duplicate session in #{room_key} at #{start}") if slot.key?(room_key)
+        slot[room_key] = { "title" => title, "placeholder" => true }
       end
       missing_rooms = CONFERENCE_ROOMS.values - slot.keys
       abort_sync("missing room at #{start}: #{missing_rooms.join(', ')}") unless missing_rooms.empty?

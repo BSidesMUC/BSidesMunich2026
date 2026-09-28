@@ -243,6 +243,23 @@
   }
 }
 
+.conference-session--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 142px;
+  border-style: dashed;
+  color: var(--text-muted);
+  opacity: 0.65;
+
+  h3 {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
+
 .session-room {
   display: none;
   color: var(--neon-cyan);

@@ -66,12 +66,12 @@ subtitle: Workshops and talks at BSides Munich 2026.
         {% assign rooms = "partenkirchen,munich" | split: "," %}
         {% for room in rooms %}
           {% assign session = slot[room] %}
-          <a class="conference-session" href="https://pretalx.com/bsides-munich-2026/talk/{{ session.code }}/" target="_blank" rel="noopener">
+          {% if session.placeholder %}<div class="conference-session conference-session--placeholder">{% else %}<a class="conference-session" href="https://pretalx.com/bsides-munich-2026/talk/{{ session.code }}/" target="_blank" rel="noopener">{% endif %}
             <span class="session-room">Room: {% if room == "partenkirchen" %}Partenkirchen{% else %}Munich{% endif %}</span>
             {% if session.rookie %}<span class="rookie-badge">Rookie</span>{% endif %}
             <h3>{{ session.title }}</h3>
-            <p>{{ session.speakers }}</p>
-          </a>
+            {% unless session.placeholder %}<p>{{ session.speakers }}</p>{% endunless %}
+          {% if session.placeholder %}</div>{% else %}</a>{% endif %}
         {% endfor %}
       </div>
 

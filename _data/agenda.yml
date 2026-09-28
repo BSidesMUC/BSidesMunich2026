@@ -102,9 +102,8 @@ conference:
     speakers: Juliane Reimann
     code: CCTQQR
   munich:
-    title: Discovering 0-Days in HTML-to-PDF Generators (40 Million Monthly Targets)
-    speakers: Pedro Cruz
-    code: XHX7KN
+    title: TBD
+    placeholder: true
 - time: 14:00–14:30
   partenkirchen:
     title: 'Escaping Tiered SOC Operations: A Role-Based Model for Modern SOCs'
