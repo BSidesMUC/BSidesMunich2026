@@ -16,7 +16,10 @@ Ingmar:
 Javier:
   handle: ""
   image:
-  bio: "-"
+  bio: >-
+    Javier Vazquez Vidal is a hardware security specialist with a lifelong passion for electronics and embedded systems security, who has been delivering hands-on hardware security trainings for over a decade. He released his first public research project at Black Hat Arsenal USA 2013 and DEFCON with the ECU tool, followed by the CAN Hacking Tool (CHT) at Black Hat Asia 2014 and his research that demonstrated that it was possible to compromise the Spanish smart power grid at Black Hat Europe.
+
+    If you see him around and want to talk with him or ask him some questions, make sure to bring an extra beer or coffee along, depending on the time of the day.
 
 Jörg:
   handle: ""
@@ -47,4 +50,3 @@ Sneha:
   handle: "@Sneharajguru"
   image: "/assets/images/organizers/sneha.jpg"
   bio: "Sneha has been working in the field of information security for over a decade now, she has spoken and provided training at various international security conferences. Outside work, she likes to take small hikes in the alps, spends her time building the 75192 Millennium Falcon and is obsessed with Darth Vader."
-
