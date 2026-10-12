@@ -14,9 +14,8 @@ EXPECTED_TITLE = "BSides Munich 2026"
 WORKSHOP_DATE = "2026-11-07"
 CONFERENCE_DATE = "2026-11-09"
 WORKSHOP_ROOM_PREFIX = "Hochschule München - "
-WORKSHOP_BOOKING_STATUS = {
-  "BRNBXA" => "Not yet available for booking"
-}.freeze
+# Temporarily hidden from the website agenda, even if still listed in Pretalx.
+HIDDEN_WORKSHOP_CODES = %w[BRNBXA].freeze
 CANCELED_SESSION_CODES = {
   "XHX7KN" => "TBD"
 }.freeze
@@ -95,7 +94,7 @@ unless sessions_without_people.empty?
 end
 
 agenda = {
-  "workshops" => workshop_sessions.map do |session|
+  "workshops" => workshop_sessions.reject { |session| HIDDEN_WORKSHOP_CODES.include?(session.fetch("code")) }.map do |session|
     workshop = {
       "time" => "#{session.fetch('start')}–#{session.fetch('end')[11, 5]}",
       "room" => session.fetch("source_room").delete_prefix(WORKSHOP_ROOM_PREFIX),
@@ -103,8 +102,6 @@ agenda = {
       "speakers" => session.fetch("persons").map { |person| person.fetch("public_name") }.join(" & "),
       "code" => session.fetch("code")
     }
-    status = WORKSHOP_BOOKING_STATUS[session.fetch("code")]
-    workshop["booking_status"] = status if status
     workshop
   end,
   "conference" => conference_sessions.group_by { |session| [session.fetch("start"), session.fetch("end")[11, 5]] }
