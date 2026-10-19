@@ -14,20 +14,6 @@
     ]
   },
   {
-    "code": "QWVJA7",
-    "name": "Amelie",
-    "avatar": null,
-    "biography": "Amelie is a student at FAU Erlangen-Nürnberg who deals with data-driven approaches to attack modeling.  She has some hands-on experience as a working student supporting incident response and forensics.",
-    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/QWVJA7/",
-    "sessions": [
-      {
-        "title": "Balanced Attack Modeling: Connecting ATT&CK to Create Actionable Paths",
-        "url": "https://pretalx.com/bsides-munich-2026/talk/BPFZJK/",
-        "type": "Talk"
-      }
-    ]
-  },
-  {
     "code": "9RQ3EY",
     "name": "Andoni Alonso",
     "avatar": "https://pretalx.com/media/avatars/UKFTUX_QOB5bYN.webp",

@@ -134,9 +134,8 @@ conference:
     speakers: Michael Kuckuk
     code: JPHN3B
   munich:
-    title: 'Balanced Attack Modeling: Connecting ATT&CK to Create Actionable Paths'
-    speakers: Amelie
-    code: BPFZJK
+    title: TBD
+    placeholder: true
 - time: 16:50–17:20
   partenkirchen:
     title: 'Your Perimeter Is Already Dead: Zero Trust with Keycloak and SPIFFE'

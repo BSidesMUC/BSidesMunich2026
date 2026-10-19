@@ -4,22 +4,23 @@ title: Speakers
 subtitle: Meet the people sharing their knowledge at BSides Munich 2026.
 ---
 
+{% assign all_speakers = site.data.speakers | concat: site.data.additional_speakers | uniq: 'name' | sort_natural: 'name' %}
 <div class="speakers-intro">
-  <p>{{ site.data.speakers | size }} speakers, researchers, and practitioners across Workshop Day and Conference Day.</p>
+  <p>{{ all_speakers | size }} speakers, researchers, and practitioners across Workshop Day and Conference Day.</p>
   <a class="btn btn-outline" href="https://pretalx.com/bsides-munich-2026/schedule/" target="_blank" rel="noopener">Explore the schedule &rarr;</a>
 </div>
 
 <div class="speaker-grid">
-  {% for speaker in site.data.speakers %}
+  {% for speaker in all_speakers %}
     <article class="speaker-card fade-in">
-      <a class="speaker-profile-link" href="{{ speaker.profile_url }}" target="_blank" rel="noopener" aria-label="View {{ speaker.name }} on Pretalx">
+      {% if speaker.profile_url %}<a class="speaker-profile-link" href="{{ speaker.profile_url }}" target="_blank" rel="noopener" aria-label="View {{ speaker.name }} on Pretalx">{% else %}<div class="speaker-profile-link">{% endif %}
         {% if speaker.avatar %}
           <img class="speaker-avatar speaker-avatar--image" src="{{ speaker.avatar }}" alt="{{ speaker.name | escape }}" loading="lazy">
         {% else %}
           <span class="speaker-avatar" aria-hidden="true">{{ speaker.name | slice: 0, 1 }}</span>
         {% endif %}
         <h2 class="speaker-name">{{ speaker.name | escape }}</h2>
-      </a>
+      {% if speaker.profile_url %}</a>{% else %}</div>{% endif %}
 
       {% if speaker.biography != "" %}
         <p class="speaker-bio">{{ speaker.biography | escape }}</p>
@@ -27,7 +28,7 @@ subtitle: Meet the people sharing their knowledge at BSides Munich 2026.
 
       <div class="speaker-sessions">
         {% for session in speaker.sessions %}
-          <a href="{{ session.url }}" target="_blank" rel="noopener">
+          <a href="{% if session.url %}{{ session.url }}{% else %}{{ '/agenda/#additional-talks' | relative_url }}{% endif %}"{% if session.url %} target="_blank" rel="noopener"{% endif %}>
             <span>{{ session.type }}</span>
             {{ session.title | escape }}
           </a>
@@ -38,5 +39,5 @@ subtitle: Meet the people sharing their knowledge at BSides Munich 2026.
 </div>
 
 <p class="speakers-note">
-  Speaker information is synchronized from the published <a href="https://pretalx.com/bsides-munich-2026/schedule/" target="_blank" rel="noopener">Pretalx schedule</a>.
+  Speaker information comes from the published <a href="https://pretalx.com/bsides-munich-2026/schedule/" target="_blank" rel="noopener">Pretalx schedule</a> and organizer announcements.
 </p>

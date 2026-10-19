@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Hilko Bengen",
+    "biography": "Hilko works in the CSIRT for a transportation and logistics company. He feels most comfortable when thinking about problems that touch systems programming, operations and IT security. For more than 25 years, he has learned to take free and open source software for granted and he is still amazed when he hears how others have found his contributions useful.",
+    "sessions": [
+      {
+        "title": "Detecting Linux rootkits: Know where to look in user-space",
+        "type": "Talk",
+        "description": "Rootkits are designed to hide themselves or other malicious software from users' and administrators' prying eyes. To create the illusion that nothing is there and everybody is fine to move along, they usually subvert tool output, standard library functions or kernel system calls to hide the presence of specific processes or files.\n\nThis illusion is often just convincing enough to fool standard tools, but if we put a little more effort into observing subtleties in system behavior, we can still see shadows of what has been hidden, by relying on traces that are hard to cover by rootkit authors.\n\nIn this talk I take a look at rootkit implementations that subvert the system at different layers – the system call interface, the standard library, or through eBPF probes. I give an overview over detection techniques that have been implemented in traditional rootkit hunting scripts, plus a few novel methods.\n\nI present a modern implementation of the most promising techniques that can be integrated with existing live-forensic capabilities to hunt for rootkits at scale."
+      }
+    ]
+  }
+]

@@ -82,6 +82,26 @@ subtitle: Workshops and talks at BSides Munich 2026.
   </div>
 </section>
 
+<section class="agenda-day" id="additional-talks" aria-labelledby="additional-talks-title">
+  <h2 class="track-name" id="additional-talks-title">Additional Conference Talks</h2>
+  {% assign scheduled_speaker_names = site.data.speakers | map: 'name' %}
+  {% for speaker in site.data.additional_speakers %}
+    {% unless scheduled_speaker_names contains speaker.name %}
+      {% for session in speaker.sessions %}
+        <article class="workshop-card">
+          <p class="section-label">Time and room to be announced</p>
+          <h3>{{ session.title | escape }}</h3>
+          <p>{{ speaker.name | escape }}</p>
+          <details>
+            <summary>Talk description</summary>
+            {{ session.description | escape | newline_to_br }}
+          </details>
+        </article>
+      {% endfor %}
+    {% endunless %}
+  {% endfor %}
+</section>
+
 <p class="agenda-note">
   Schedule data from <a href="https://pretalx.com/bsides-munich-2026/schedule/" target="_blank" rel="noopener">Pretalx</a>. Times are local and the program may still change.
 </p>
