@@ -350,6 +350,20 @@
     ]
   },
   {
+    "code": "7ZDPPR",
+    "name": "Samuel Hopstock",
+    "avatar": "https://pretalx.com/media/avatars/3DYCUB_6yAoVpZ.webp",
+    "biography": "Samuel Hopstock is a software engineer at Guardsquare, where he was one of the first engineers working on AppSweep, a mobile app security testing tool. Initially, he contributed to the Java bytecode analysis engine for Android apps. Since then he has shifted his focus to analyzing and protecting native iOS, Android, and Flutter binaries.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/7ZDPPR/",
+    "sessions": [
+      {
+        "title": "Poisoned at the Source: Hacking the Software Supply Chain in Your CI/CD Pipeline",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/XGXC7D/",
+        "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
     "code": "WQ893N",
     "name": "Tobias Madl",
     "avatar": "https://pretalx.com/media/avatars/AQEF87_rug2CAQ.webp",

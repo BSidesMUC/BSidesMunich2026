@@ -44,7 +44,7 @@ workshops:
   room: R0.007
   title: 'Poisoned at the Source: Hacking the Software Supply Chain in Your CI/CD
     Pipeline'
-  speakers: Daniel Schwendner
+  speakers: Daniel Schwendner & Samuel Hopstock
   code: XGXC7D
 - time: 14:00–18:00
   room: R1.005
