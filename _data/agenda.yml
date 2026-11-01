@@ -77,10 +77,9 @@ conference:
     speakers: Arad Donenfeld
     code: EKQSDM
   munich:
-    title: 'Infected Drones: How Compromised Autonomous Systems Pwn Ground Control
-      Stations'
-    speakers: Nick Aleks
-    code: X9QZUA
+    title: 'Detecting Linux rootkits: Know where to look in user-space'
+    speakers: Hilko Bengen
+    code: MBS379
 - time: 12:00–12:30
   partenkirchen:
     title: Symbolic Execution for Embedded Binaries
@@ -119,10 +118,9 @@ conference:
     code: MABVKX
 - time: 15:30–16:00
   partenkirchen:
-    title: 'The Negotiation You Never Logged: Making PQC State Visible in Production'
-    speakers: Dilroop Ummar Shameem
-    code: A9NSZW
-    rookie: true
+    title: ".NET Profiling for Reverse Engineers"
+    speakers: Sunil Kumar
+    code: VPFYZY
   munich:
     title: Teaching AI to hack Joomla so I can skip my homework
     speakers: vurlo
@@ -134,8 +132,9 @@ conference:
     speakers: Michael Kuckuk
     code: JPHN3B
   munich:
-    title: TBD
-    placeholder: true
+    title: 'GRC vs. CTI: Lost in Translation'
+    speakers: Jennifer Janesko
+    code: 7ZJYSV
 - time: 16:50–17:20
   partenkirchen:
     title: 'Your Perimeter Is Already Dead: Zero Trust with Keycloak and SPIFFE'

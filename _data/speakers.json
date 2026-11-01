@@ -56,20 +56,6 @@
     ]
   },
   {
-    "code": "BB7AJF",
-    "name": "Dilroop Ummar Shameem",
-    "avatar": null,
-    "biography": "I’m a Systems & Cryptography Engineer with a background in Political Science and Esports, which shaped my research mindset. I started as a Python backend engineer working with Django, APIs, and application architecture, then gradually shifted toward security, systems, and cryptography to understand how software behaves beneath the surface. Today, I work mainly with Rust, along Python with and C++, focusing on protocol experiments, cryptography, and security-oriented systems.",
-    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/BB7AJF/",
-    "sessions": [
-      {
-        "title": "The Negotiation You Never Logged: Making PQC State Visible in Production",
-        "url": "https://pretalx.com/bsides-munich-2026/talk/A9NSZW/",
-        "type": "Talks - Rookie"
-      }
-    ]
-  },
-  {
     "code": "AX9KWH",
     "name": "Evgen Blohm",
     "avatar": "https://pretalx.com/media/avatars/PQML9Q_6d6M4z9.webp",
@@ -108,6 +94,34 @@
         "title": "Exploiting .NET Remoting services",
         "url": "https://pretalx.com/bsides-munich-2026/talk/AJHKCN/",
         "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "3GZ8WA",
+    "name": "Hilko Bengen",
+    "avatar": null,
+    "biography": "Hilko works in the CSIRT for a transportation and logistics company. He feels most comfortable when thinking about problems that touch systems programming, operations and IT security. For more than 25 years, he has learned to take free and open source software for granted and he is still amazed when he hears how others have found his contributions useful.",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/3GZ8WA/",
+    "sessions": [
+      {
+        "title": "Detecting Linux rootkits: Know where to look in user-space",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/MBS379/",
+        "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "KXKN7Q",
+    "name": "Jennifer Janesko",
+    "avatar": null,
+    "biography": "",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/KXKN7Q/",
+    "sessions": [
+      {
+        "title": "GRC vs. CTI: Lost in Translation",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/7ZJYSV/",
+        "type": "Talk"
       }
     ]
   },
@@ -266,20 +280,6 @@
     ]
   },
   {
-    "code": "WH3BRE",
-    "name": "Nick Aleks",
-    "avatar": null,
-    "biography": "Nick Aleks is a renowned cybersecurity researcher, engineer and author of Black Hat Bash, and Black Hat GraphQL, (as well as the upcoming Drone Hacker's Handbook). Nick Aleks founded  ASEC (asec.io) a full-service offensive security firm and established DEFCON Toronto (DC416). He has spent over a decade spearheading cybersecurity initiatives at major financial institutions while also devoting more than a decade to mechanical engineering, robotics and drone hacking. Nick hosts Drone Hacking Workshops at DEFCON and authored numerous drone hacking tools - including Damn Vulnerable Drone, SiKW00F, and MAVSploit.",
-    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/WH3BRE/",
-    "sessions": [
-      {
-        "title": "Infected Drones: How Compromised Autonomous Systems Pwn Ground Control Stations",
-        "url": "https://pretalx.com/bsides-munich-2026/talk/X9QZUA/",
-        "type": "Talk"
-      }
-    ]
-  },
-  {
     "code": "AGSEZ8",
     "name": "Pedro Martín",
     "avatar": null,
@@ -304,20 +304,6 @@
         "title": "ANALYZE & HUNT DPRK ATTACKS",
         "url": "https://pretalx.com/bsides-munich-2026/talk/9TQD99/",
         "type": "Workshop (4h)"
-      }
-    ]
-  },
-  {
-    "code": "EQU9VY",
-    "name": "Ralph Andalis",
-    "avatar": "https://pretalx.com/media/avatars/8BUAGA_vpNEQ5Y.webp",
-    "biography": "Ralph is the Security Director of Gridlock Security (GridlockSec) - a company he founded that focuses on cybersecurity consulting services. He has 10 years experience in the industry as a Security Consultant/Pentester/Security Researcher for a few companies such as Microsoft, NCC Group, Hewlett-Packard (HP), Forward Security, and Ernst & Young (E&Y).\nHis expertise is mainly Web, Mobile, and Network Pentesting, Threat Modelling, Security Architecture Review, and Security Design Reviews. When he was a Senior Security Engineer at Microsoft, he dealt with security architecture reviews, security design reviews, threat modelling, security research, code reviews, and pentesting on the dedicated product he is directly working on with 100+ software engineers. The threat modelling practice he had daily done with his software engineers had helped secure the product and promoted a culture of secure coding and engineering of the said software.\n\nHe is also a major active contributor and a member of the working group for the OWASP Application Security Verification Standard (ASVS) project, making the standard better for fellow pentesters and developers alike.\n\nHe trained attendees at BSides Vancouver 2025, BSides Orlando 2025 and BSides Luxembourg 2026 for the workshop, \"Threat Modelling Starter Training\" which had been well received. He has presented his talk entitled, \"OWASP ASVS: A Methodical and Practical Approach to Application Security Testing\" on OWASP AppSec Pacific Northwest conference (PNW) 2024 in Vancouver, BC Canada. He has also presented a similar presentation aimed for beginners delivered online at HackStop Cybersecurity Summit 2024 held in Ljubljana, Slovenia.",
-    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/EQU9VY/",
-    "sessions": [
-      {
-        "title": "The Art of Practical Threat Modelling",
-        "url": "https://pretalx.com/bsides-munich-2026/talk/BRNBXA/",
-        "type": "Workshop (8h)"
       }
     ]
   },
@@ -360,6 +346,20 @@
         "title": "Poisoned at the Source: Hacking the Software Supply Chain in Your CI/CD Pipeline",
         "url": "https://pretalx.com/bsides-munich-2026/talk/XGXC7D/",
         "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "TG3BPY",
+    "name": "Sunil Kumar",
+    "avatar": null,
+    "biography": "",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/TG3BPY/",
+    "sessions": [
+      {
+        "title": ".NET Profiling for Reverse Engineers",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/VPFYZY/",
+        "type": "Talk"
       }
     ]
   },
