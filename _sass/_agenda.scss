@@ -325,3 +325,32 @@
     display: none;
   }
 }
+
+.agenda-break {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px dashed rgba(0, 229, 255, 0.18);
+  border-radius: var(--border-radius);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  time {
+    min-width: 120px;
+    color: var(--neon-cyan);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 760px) {
+    gap: 10px;
+
+    time {
+      min-width: 0;
+    }
+  }
+}

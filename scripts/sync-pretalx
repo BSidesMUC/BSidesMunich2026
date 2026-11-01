@@ -3,6 +3,7 @@
 
 require "json"
 require "net/http"
+require "time"
 require "optparse"
 require "tempfile"
 require "uri"
@@ -17,9 +18,11 @@ WORKSHOP_ROOM_PREFIX = "Hochschule München - "
 # Temporarily hidden from the website agenda, even if still listed in Pretalx.
 HIDDEN_WORKSHOP_CODES = %w[BRNBXA].freeze
 CANCELED_SESSION_CODES = {
-  "BPFZJK" => "TBD",
-  "XHX7KN" => "TBD"
+  "BPFZJK" => "TBD"
 }.freeze
+WIDGET_URL = "https://pretalx.com/#{EVENT}/schedule/widget/v2.json"
+# Pretalx break slots that are not worth showing on the website.
+IGNORED_BREAK_TITLES = ["Room change"].freeze
 CONFERENCE_ROOMS = {
   "Westin - Partenkirchen" => "partenkirchen",
   "Westin - Munich" => "munich"
@@ -67,8 +70,23 @@ def pretalx_day(conference, date)
     abort_sync("expected schedule day #{date} is missing")
 end
 
+def break_slots(widget, date)
+  widget.fetch("talks")
+    .select { |talk| talk["slot_type"] == "break" }
+    .map do |talk|
+      start = Time.parse(talk.fetch("start")).getlocal("+01:00")
+      finish = Time.parse(talk.fetch("end")).getlocal("+01:00")
+      { "date" => start.strftime("%Y-%m-%d"), "start" => start.strftime("%H:%M"), "end" => finish.strftime("%H:%M"),
+        "title" => talk.dig("title", "en") }
+    end
+    .select { |slot| slot["date"] == date && !IGNORED_BREAK_TITLES.include?(slot["title"]) }
+    .uniq
+    .sort_by { |slot| slot["start"] }
+end
+
 raw = options[:source] ? File.read(options[:source]) : fetch_export(EXPORT_URL)
 export = JSON.parse(raw)
+widget = JSON.parse(fetch_export(WIDGET_URL))
 conference = export.dig("schedule", "conference") || abort_sync("conference data is missing")
 
 abort_sync("unexpected event acronym #{conference['acronym'].inspect}") unless conference["acronym"] == EVENT
@@ -131,6 +149,9 @@ agenda = {
       abort_sync("missing room at #{start}: #{missing_rooms.join(', ')}") unless missing_rooms.empty?
       slot
     end
+    .concat(break_slots(widget, CONFERENCE_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"] } })
+    .sort_by { |slot| slot.fetch("time") },
+  "workshop_breaks" => break_slots(widget, WORKSHOP_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"] } }
 }
 
 speaker_entries = all_sessions.flat_map do |session|

@@ -52,6 +52,12 @@ workshops:
   speakers: John Strand
   code: GDJPXS
 conference:
+- time: '08:00–09:00'
+  break: Registration
+- time: '09:10–09:40'
+  break: Opening Keynote
+- time: '09:40–10:00'
+  break: Break
 - time: 10:00–10:30
   partenkirchen:
     title: 'The Trouble with Tensors: Securing Tensor Serialization'
@@ -71,6 +77,8 @@ conference:
     title: 'You have no fuzzer here: Fuzzing automotive firmware in exotic environments'
     speakers: Reza Zamiri
     code: GRSPYJ
+- time: 11:00–11:30
+  break: Break
 - time: 11:30–12:00
   partenkirchen:
     title: 'The Agents of Chaos: AI Driven Malware Generation'
@@ -95,8 +103,11 @@ conference:
     speakers: Juliane Reimann
     code: CCTQQR
   munich:
-    title: TBD
-    placeholder: true
+    title: Discovering 0-Days in HTML-to-PDF Generators (40 Million Monthly Targets)
+    speakers: Pedro Cruz
+    code: XHX7KN
+- time: 13:00–14:00
+  break: Lunch Break
 - time: 14:00–14:30
   partenkirchen:
     title: 'Escaping Tiered SOC Operations: A Role-Based Model for Modern SOCs'
@@ -116,6 +127,8 @@ conference:
     title: 'From RFCs to Seeds: LLM-Driven Seed Generation for Network Protocol Fuzzing'
     speakers: Saifeldin Mandour
     code: MABVKX
+- time: 15:00–15:30
+  break: Break
 - time: 15:30–16:00
   partenkirchen:
     title: ".NET Profiling for Reverse Engineers"
@@ -135,6 +148,8 @@ conference:
     title: 'GRC vs. CTI: Lost in Translation'
     speakers: Jennifer Janesko
     code: 7ZJYSV
+- time: 16:30–16:50
+  break: Break
 - time: 16:50–17:20
   partenkirchen:
     title: 'Your Perimeter Is Already Dead: Zero Trust with Keycloak and SPIFFE'
@@ -144,3 +159,6 @@ conference:
     title: Teaching Old Dogs New Tricks
     speakers: Jonathan Prince
     code: LYRARW
+workshop_breaks:
+- time: '08:00–09:00'
+  break: Registration
