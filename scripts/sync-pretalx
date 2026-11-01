@@ -71,16 +71,24 @@ def pretalx_day(conference, date)
 end
 
 def break_slots(widget, date)
+  rooms = widget.fetch("rooms").to_h { |room| [room["id"], room.dig("name", "en")] }
   widget.fetch("talks")
     .select { |talk| talk["slot_type"] == "break" }
     .map do |talk|
       start = Time.parse(talk.fetch("start")).getlocal("+01:00")
       finish = Time.parse(talk.fetch("end")).getlocal("+01:00")
       { "date" => start.strftime("%Y-%m-%d"), "start" => start.strftime("%H:%M"), "end" => finish.strftime("%H:%M"),
-        "title" => talk.dig("title", "en") }
+        "title" => talk.dig("title", "en"), "room" => rooms[talk["room"]] }
     end
     .select { |slot| slot["date"] == date && !IGNORED_BREAK_TITLES.include?(slot["title"]) }
-    .uniq
+    .group_by { |slot| slot.values_at("start", "end", "title") }
+    .map do |_key, group|
+      slot = group.first.reject { |key, _| key == "room" }
+      conference_rooms = group.map { |entry| CONFERENCE_ROOMS[entry["room"]] }.compact.uniq
+      # Breaks that only exist in some conference rooms are shown in those rooms' columns only.
+      slot["rooms"] = conference_rooms if conference_rooms.any? && conference_rooms.length < CONFERENCE_ROOMS.length
+      slot
+    end
     .sort_by { |slot| slot["start"] }
 end
 
@@ -149,7 +157,7 @@ agenda = {
       abort_sync("missing room at #{start}: #{missing_rooms.join(', ')}") unless missing_rooms.empty?
       slot
     end
-    .concat(break_slots(widget, CONFERENCE_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"] } })
+    .concat(break_slots(widget, CONFERENCE_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"], "rooms" => slot["rooms"] }.compact })
     .sort_by { |slot| slot.fetch("time") },
   "workshop_breaks" => break_slots(widget, WORKSHOP_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"] } }
 }

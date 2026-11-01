@@ -54,10 +54,16 @@ workshops:
 conference:
 - time: '08:00–09:00'
   break: Registration
+  rooms:
+  - munich
 - time: '09:10–09:40'
   break: Opening Keynote
+  rooms:
+  - munich
 - time: '09:40–10:00'
   break: Break
+  rooms:
+  - munich
 - time: 10:00–10:30
   partenkirchen:
     title: 'The Trouble with Tensors: Securing Tensor Serialization'
