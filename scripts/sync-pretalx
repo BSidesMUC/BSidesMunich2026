@@ -23,6 +23,8 @@ CANCELED_SESSION_CODES = {
 WIDGET_URL = "https://pretalx.com/#{EVENT}/schedule/widget/v2.json"
 # Pretalx break slots that are not worth showing on the website.
 IGNORED_BREAK_TITLES = ["Room change"].freeze
+# Pretalx pins these to one room, but they happen at the front desk and apply to everyone.
+VENUE_WIDE_BREAK_TITLES = ["Registration"].freeze
 CONFERENCE_ROOMS = {
   "Westin - Partenkirchen" => "partenkirchen",
   "Westin - Munich" => "munich"
@@ -86,7 +88,8 @@ def break_slots(widget, date)
       slot = group.first.reject { |key, _| key == "room" }
       conference_rooms = group.map { |entry| CONFERENCE_ROOMS[entry["room"]] }.compact.uniq
       # Breaks that only exist in some conference rooms are shown in those rooms' columns only.
-      slot["rooms"] = conference_rooms if conference_rooms.any? && conference_rooms.length < CONFERENCE_ROOMS.length
+      slot["rooms"] = conference_rooms if conference_rooms.any? && conference_rooms.length < CONFERENCE_ROOMS.length &&
+                                !VENUE_WIDE_BREAK_TITLES.include?(slot["title"])
       slot
     end
     .sort_by { |slot| slot["start"] }
@@ -157,7 +160,7 @@ agenda = {
       abort_sync("missing room at #{start}: #{missing_rooms.join(', ')}") unless missing_rooms.empty?
       slot
     end
-    .concat(break_slots(widget, CONFERENCE_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"], "rooms" => slot["rooms"] }.compact })
+    .concat(break_slots(widget, CONFERENCE_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"], "rooms" => slot["rooms"], "featured" => (true unless slot["title"].match?(/break/i)) }.compact })
     .sort_by { |slot| slot.fetch("time") },
   "workshop_breaks" => break_slots(widget, WORKSHOP_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"] } }
 }

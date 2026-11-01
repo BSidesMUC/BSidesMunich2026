@@ -25,7 +25,7 @@ subtitle: Workshops and talks at BSides Munich 2026.
   </div>
 
   {% for item in site.data.agenda.workshop_breaks %}
-    <div class="agenda-break">
+    <div class="agenda-break agenda-break--featured">
       <time>{{ item.time }}</time>
       <span>{{ item.break }}</span>
     </div>
@@ -68,9 +68,9 @@ subtitle: Workshops and talks at BSides Munich 2026.
 
     {% for slot in site.data.agenda.conference %}
       {% if slot.break %}
-        <div class="agenda-break{% if slot.rooms %} agenda-break--{{ slot.rooms | first }}{% endif %}">
+        <div class="agenda-break{% if slot.rooms %} agenda-break--{{ slot.rooms | first }}{% endif %}{% if slot.featured %} agenda-break--featured{% endif %}">
           <time>{{ slot.time }}</time>
-          <span>{{ slot.break }}{% if slot.rooms %} &middot; Room: {% if slot.rooms contains "munich" %}Munich{% else %}Partenkirchen{% endif %}{% endif %}</span>
+          <span>{{ slot.break }}</span>
         </div>
         {% continue %}
       {% endif %}

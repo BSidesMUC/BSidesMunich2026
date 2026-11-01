@@ -390,3 +390,14 @@
     grid-column: 1;
   }
 }
+
+.agenda-break--featured {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-color: rgba(0, 229, 255, 0.4);
+
+  span {
+    border-color: rgba(0, 229, 255, 0.4);
+  }
+}
