@@ -401,3 +401,24 @@
     border-color: rgba(0, 229, 255, 0.4);
   }
 }
+
+.conference-session--keynote {
+  border-color: rgba(0, 229, 255, 0.4);
+
+  h3 {
+    font-weight: 700;
+  }
+}
+
+.keynote-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  color: var(--bg-primary);
+  background: var(--neon-cyan);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

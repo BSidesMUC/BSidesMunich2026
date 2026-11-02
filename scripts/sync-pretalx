@@ -15,14 +15,20 @@ EXPECTED_TITLE = "BSides Munich 2026"
 WORKSHOP_DATE = "2026-11-07"
 CONFERENCE_DATE = "2026-11-09"
 WORKSHOP_ROOM_PREFIX = "Hochschule München - "
-# Temporarily hidden from the website agenda, even if still listed in Pretalx.
-HIDDEN_WORKSHOP_CODES = %w[BRNBXA].freeze
+# Hidden from the website agenda and speaker list, even if still listed in Pretalx.
+HIDDEN_WORKSHOP_CODES = %w[BRNBXA PTU9TZ 9TQD99].freeze
 CANCELED_SESSION_CODES = {
   "BPFZJK" => "TBD"
 }.freeze
 # Program items that are not (yet) in Pretalx; skipped once Pretalx lists a slot with the same title.
+# Placeholders below give way once Pretalx lists a real session (e.g. a keynote) in the same time slot.
+# Keynotes are plain talks in Pretalx; they are labelled here by session code.
+KEYNOTE_LABELS = {
+  "YUEPSB" => "Opening Keynote",
+  "9QBG3B" => "Closing Keynote"
+}.freeze
 MANUAL_CONFERENCE_BREAKS = [
-  { "time" => "09:00–09:10", "break" => "Opening", "rooms" => ["munich"], "featured" => true },
+  { "time" => "09:00–09:10", "break" => "Opening Ceremony", "rooms" => ["munich"], "featured" => true },
   { "time" => "17:25–17:55", "break" => "Closing Keynote", "rooms" => ["munich"], "featured" => true },
   { "time" => "17:55–18:00", "break" => "Closing Ceremony", "rooms" => ["munich"], "featured" => true }
 ].freeze
@@ -111,6 +117,7 @@ abort_sync("unexpected conference title #{conference['title'].inspect}") unless 
 
 workshop_sessions = sessions_for(pretalx_day(conference, WORKSHOP_DATE))
   .select { |session| session["track"] == "Workshops" }
+  .reject { |session| HIDDEN_WORKSHOP_CODES.include?(session.fetch("code")) }
   .sort_by { |session| [session.fetch("start"), session.fetch("source_room"), session.fetch("title")] }
 
 conference_sessions = sessions_for(pretalx_day(conference, CONFERENCE_DATE))
@@ -130,7 +137,7 @@ unless sessions_without_people.empty?
 end
 
 agenda = {
-  "workshops" => workshop_sessions.reject { |session| HIDDEN_WORKSHOP_CODES.include?(session.fetch("code")) }.map do |session|
+  "workshops" => workshop_sessions.map do |session|
     workshop = {
       "time" => "#{session.fetch('start')}–#{session.fetch('end')[11, 5]}",
       "room" => session.fetch("source_room").delete_prefix(WORKSHOP_ROOM_PREFIX),
@@ -162,12 +169,19 @@ agenda = {
         abort_sync("duplicate session in #{room_key} at #{start}") if slot.key?(room_key)
         slot[room_key] = { "title" => title, "placeholder" => true }
       end
-      missing_rooms = CONFERENCE_ROOMS.values - slot.keys
-      abort_sync("missing room at #{start}: #{missing_rooms.join(', ')}") unless missing_rooms.empty?
+      # A session alone in its slot (keynotes) runs in one room only; every other slot needs both rooms.
+      session_rooms = CONFERENCE_ROOMS.values & slot.keys
+      if session_rooms.length == 1
+        keynote = slot[session_rooms.first]
+        keynote["keynote"] = KEYNOTE_LABELS.fetch(keynote.fetch("code")) { abort_sync("unlabelled single-room session #{keynote['code']}") }
+      elsif session_rooms.length < CONFERENCE_ROOMS.length
+        abort_sync("missing room at #{start}: #{(CONFERENCE_ROOMS.values - slot.keys).join(', ')}")
+      end
       slot
     end
     .concat(break_slots(widget, CONFERENCE_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"], "rooms" => slot["rooms"], "featured" => (true unless slot["title"].match?(/break/i)) }.compact })
     .then { |slots| slots + MANUAL_CONFERENCE_BREAKS.reject { |manual| slots.any? { |slot| slot["break"] == manual["break"] } } }
+    .then { |slots| slots.reject { |slot| slot["break"] && slots.any? { |other| !other["break"] && other["time"] == slot["time"] } } }
     .sort_by { |slot| slot.fetch("time") },
   "workshop_breaks" => break_slots(widget, WORKSHOP_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"] } }
 }

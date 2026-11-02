@@ -15,11 +15,6 @@ workshops:
   title: 'From Checkbox to Evidence: A Hands-On NIS-2 Assessment for a Fictional SME'
   speakers: Younes Ahmadzei
   code: 7CLDS8
-- time: '09:00–13:00'
-  room: R1.005
-  title: 'LLM Security Hands-On: Attacking and Defending AI-Powered Applications'
-  speakers: Moritz Krause
-  code: PTU9TZ
 - time: '09:00–17:00'
   room: R1.006
   title: Hack the Vault, Save the Conference
@@ -30,11 +25,6 @@ workshops:
   title: Linux Security and Isolation APIs essentials
   speakers: Michael Kerrisk
   code: 89HQSJ
-- time: 14:00–18:00
-  room: R0.004
-  title: ANALYZE & HUNT DPRK ATTACKS
-  speakers: RAKESH KRISHNAN
-  code: 9TQD99
 - time: 14:00–18:00
   room: R0.006
   title: Exploiting .NET Remoting services
@@ -56,15 +46,16 @@ conference:
   break: Registration
   featured: true
 - time: '09:00–09:10'
-  break: Opening
+  break: Opening Ceremony
   rooms:
   - munich
   featured: true
 - time: '09:10–09:40'
-  break: Opening Keynote
-  rooms:
-  - munich
-  featured: true
+  munich:
+    title: Working in the age of AI
+    speakers: Hans-Martin Münch
+    code: YUEPSB
+    keynote: Opening Keynote
 - time: '09:40–10:00'
   break: Break
   rooms:
@@ -171,10 +162,11 @@ conference:
     speakers: Jonathan Prince
     code: LYRARW
 - time: 17:25–17:55
-  break: Closing Keynote
-  rooms:
-  - munich
-  featured: true
+  munich:
+    title: Reward hacking during LLM RL
+    speakers: Sebastian Müller
+    code: 9QBG3B
+    keynote: Closing Keynote
 - time: 17:55–18:00
   break: Closing Ceremony
   rooms:

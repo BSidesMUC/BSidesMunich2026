@@ -94,6 +94,11 @@
         "title": "Exploiting .NET Remoting services",
         "url": "https://pretalx.com/bsides-munich-2026/talk/AJHKCN/",
         "type": "Workshop (4h)"
+      },
+      {
+        "title": "Working in the age of AI",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/YUEPSB/",
+        "type": "Talk"
       }
     ]
   },
@@ -266,20 +271,6 @@
     ]
   },
   {
-    "code": "7UPUGA",
-    "name": "Moritz Krause",
-    "avatar": null,
-    "biography": "Security Engineer @ FullCyrcle Security\n\nMoritz Krause has been working in software development since 2010, with a strong focus on building and securing web applications. After completing a degree in computer science and working as a software engineer for many years, he shifted his focus toward cybersecurity in 2024. His current work centers on DevSecOps, backend development, AI security, and threat modeling. Combining deep technical expertise with a strong understanding of the secure software development lifecycle (SDLC), Moritz explores how AI can be leveraged to enhance security practices across modern development environments.",
-    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/7UPUGA/",
-    "sessions": [
-      {
-        "title": "LLM Security Hands-On: Attacking and Defending AI-Powered Applications",
-        "url": "https://pretalx.com/bsides-munich-2026/talk/PTU9TZ/",
-        "type": "Workshop (4h)"
-      }
-    ]
-  },
-  {
     "code": "ES3GGG",
     "name": "Pedro Cruz",
     "avatar": "https://pretalx.com/media/avatars/BJD3JG_F1DtRA2.webp",
@@ -303,20 +294,6 @@
       {
         "title": "Level Up Your CI/CD: Building a secure pipeline with OSS",
         "url": "https://pretalx.com/bsides-munich-2026/talk/KKNQ3M/",
-        "type": "Workshop (4h)"
-      }
-    ]
-  },
-  {
-    "code": "9QQTYY",
-    "name": "RAKESH KRISHNAN",
-    "avatar": "https://pretalx.com/media/avatars/3SPL9S_Qtyf3gE.webp",
-    "biography": "I am **Rakesh Krishnan**, a Threat Intelligence Researcher and a regular contributor to the Infosec Community via Tweets and Investigation Blog Posts. I run a Threat Intelligence Blog named \"**THE RAVEN FILE**\" which purely focuses on Threat Intelligence Topics such as Dark Web, Ransomware Ecosystem, Scam Busting, Blockchain Analysis, etc. \n\nRecently, I infiltrated into **0APT Ransomware Group** and exposed their Modus Operandi on my latest blog post. I often expose the real IP Addresses of Ransomware Groups such as: **LockBit**, **Kairos**, etc repeatedly. 3 years back, I made it into the headlines of finding Offensive GPT Model titled \"FraudGPT\" which got a global recognition. \n\nI had conducted 2-Hour Workshop on **BSides Luxembourg** in May 2026. \n\nI had conducted a 3-Hour Dark Web Workshop for Conferences like:-  **Craccon** in **2025** and  at **IICON** in **2024** which were held in Delhi, India. \n\nThis year, I have been made into the list of **Contributor of the Year** by **ABUSECH** and **SPAMHAUS** for providing large number of **IOCs**, **Ransomware Samples** to the Platform, making a real impact in the Infosec Community by providing timely action for Defending the Threats.\n\nYou can read my Blog at: **theravenfile.com**",
-    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/9QQTYY/",
-    "sessions": [
-      {
-        "title": "ANALYZE & HUNT DPRK ATTACKS",
-        "url": "https://pretalx.com/bsides-munich-2026/talk/9TQD99/",
         "type": "Workshop (4h)"
       }
     ]
@@ -360,6 +337,20 @@
         "title": "Poisoned at the Source: Hacking the Software Supply Chain in Your CI/CD Pipeline",
         "url": "https://pretalx.com/bsides-munich-2026/talk/XGXC7D/",
         "type": "Workshop (4h)"
+      }
+    ]
+  },
+  {
+    "code": "FKKSRM",
+    "name": "Sebastian Müller",
+    "avatar": null,
+    "biography": "",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/FKKSRM/",
+    "sessions": [
+      {
+        "title": "Reward hacking during LLM RL",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/9QBG3B/",
+        "type": "Talk"
       }
     ]
   },
