@@ -20,6 +20,12 @@ HIDDEN_WORKSHOP_CODES = %w[BRNBXA].freeze
 CANCELED_SESSION_CODES = {
   "BPFZJK" => "TBD"
 }.freeze
+# Program items that are not (yet) in Pretalx; skipped once Pretalx lists a slot with the same title.
+MANUAL_CONFERENCE_BREAKS = [
+  { "time" => "09:00–09:10", "break" => "Opening", "rooms" => ["munich"], "featured" => true },
+  { "time" => "17:25–17:55", "break" => "Closing Keynote", "rooms" => ["munich"], "featured" => true },
+  { "time" => "17:55–18:00", "break" => "Closing Ceremony", "rooms" => ["munich"], "featured" => true }
+].freeze
 WIDGET_URL = "https://pretalx.com/#{EVENT}/schedule/widget/v2.json"
 # Pretalx break slots that are not worth showing on the website.
 IGNORED_BREAK_TITLES = ["Room change"].freeze
@@ -161,6 +167,7 @@ agenda = {
       slot
     end
     .concat(break_slots(widget, CONFERENCE_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"], "rooms" => slot["rooms"], "featured" => (true unless slot["title"].match?(/break/i)) }.compact })
+    .then { |slots| slots + MANUAL_CONFERENCE_BREAKS.reject { |manual| slots.any? { |slot| slot["break"] == manual["break"] } } }
     .sort_by { |slot| slot.fetch("time") },
   "workshop_breaks" => break_slots(widget, WORKSHOP_DATE).map { |slot| { "time" => "#{slot['start']}–#{slot['end']}", "break" => slot["title"] } }
 }

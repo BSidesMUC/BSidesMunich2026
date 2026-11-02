@@ -55,6 +55,11 @@ conference:
 - time: '08:00–09:00'
   break: Registration
   featured: true
+- time: '09:00–09:10'
+  break: Opening
+  rooms:
+  - munich
+  featured: true
 - time: '09:10–09:40'
   break: Opening Keynote
   rooms:
@@ -165,6 +170,16 @@ conference:
     title: Teaching Old Dogs New Tricks
     speakers: Jonathan Prince
     code: LYRARW
+- time: 17:25–17:55
+  break: Closing Keynote
+  rooms:
+  - munich
+  featured: true
+- time: 17:55–18:00
+  break: Closing Ceremony
+  rooms:
+  - munich
+  featured: true
 workshop_breaks:
 - time: '08:00–09:00'
   break: Registration
