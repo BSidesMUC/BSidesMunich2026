@@ -18,7 +18,7 @@ workshops:
 - time: '09:00–17:00'
   room: R1.006
   title: Hack the Vault, Save the Conference
-  speakers: Van Schandevijl Wouter
+  speakers: Van Schandevijl Wouter & Jan de Smet
   code: 99JLML
 - time: '09:00–17:00'
   room: R1.008
@@ -52,7 +52,7 @@ conference:
   featured: true
 - time: '09:10–09:40'
   munich:
-    title: Working in the age of AI
+    title: Working in the Age of AI
     speakers: Hans-Martin Münch
     code: YUEPSB
     keynote: Opening Keynote
@@ -105,9 +105,8 @@ conference:
     speakers: Juliane Reimann
     code: CCTQQR
   munich:
-    title: Discovering 0-Days in HTML-to-PDF Generators (40 Million Monthly Targets)
-    speakers: Pedro Cruz
-    code: XHX7KN
+    title: TBD
+    placeholder: true
 - time: 13:00–14:00
   break: Lunch Break
 - time: 14:00–14:30

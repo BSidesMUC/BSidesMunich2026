@@ -18,6 +18,7 @@ WORKSHOP_ROOM_PREFIX = "Hochschule München - "
 # Hidden from the website agenda and speaker list, even if still listed in Pretalx.
 HIDDEN_WORKSHOP_CODES = %w[BRNBXA PTU9TZ 9TQD99].freeze
 CANCELED_SESSION_CODES = {
+  "XHX7KN" => "TBD",
   "BPFZJK" => "TBD"
 }.freeze
 # Program items that are not (yet) in Pretalx; skipped once Pretalx lists a slot with the same title.

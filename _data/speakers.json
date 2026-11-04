@@ -96,7 +96,7 @@
         "type": "Workshop (4h)"
       },
       {
-        "title": "Working in the age of AI",
+        "title": "Working in the Age of AI",
         "url": "https://pretalx.com/bsides-munich-2026/talk/YUEPSB/",
         "type": "Talk"
       }
@@ -113,6 +113,20 @@
         "title": "Detecting Linux rootkits: Know where to look in user-space",
         "url": "https://pretalx.com/bsides-munich-2026/talk/MBS379/",
         "type": "Talk"
+      }
+    ]
+  },
+  {
+    "code": "GYX9NN",
+    "name": "Jan de Smet",
+    "avatar": null,
+    "biography": "",
+    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/GYX9NN/",
+    "sessions": [
+      {
+        "title": "Hack the Vault, Save the Conference",
+        "url": "https://pretalx.com/bsides-munich-2026/talk/99JLML/",
+        "type": "Workshop (8h)"
       }
     ]
   },
@@ -266,20 +280,6 @@
       {
         "title": "Phishing for Passkeys - An Analysis of WebAuthn and CTAP",
         "url": "https://pretalx.com/bsides-munich-2026/talk/JPHN3B/",
-        "type": "Talk"
-      }
-    ]
-  },
-  {
-    "code": "ES3GGG",
-    "name": "Pedro Cruz",
-    "avatar": "https://pretalx.com/media/avatars/BJD3JG_F1DtRA2.webp",
-    "biography": "My name is Pedro Cruz, I'm graduated in Information Security from FATEC Ourinhos, with a focus on Offensive Security. In recent years I have devoted myself intensively to the study and practice of penetration testing, earning certifications such as OSCP+, DCPT (Desec Certified Penetration Tester), CHWI (Crowsec Hacking Web Initial), CRTO (Certified Red Team Operator), and gaining extensive knowledge.\n\nI currently work as an offensive security analyst, primarily performing penetration tests on web applications and infrastructure, and subsequently preparing detailed reports that describe the vulnerabilities and recommended mitigations.\n\nOutside of work, I am routinely engaged in independent security research in web applications and bug bounty programs (top 20 bug hunters in Brazil at HackerOne), continuously exploring new attack vectors and methodology to identify and report vulnerabilities.",
-    "profile_url": "https://pretalx.com/bsides-munich-2026/speaker/ES3GGG/",
-    "sessions": [
-      {
-        "title": "Discovering 0-Days in HTML-to-PDF Generators (40 Million Monthly Targets)",
-        "url": "https://pretalx.com/bsides-munich-2026/talk/XHX7KN/",
         "type": "Talk"
       }
     ]
