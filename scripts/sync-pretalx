@@ -3,6 +3,7 @@
 
 require "json"
 require "net/http"
+require "open3"
 require "time"
 require "optparse"
 require "tempfile"
@@ -56,22 +57,45 @@ def abort_sync(message)
 end
 
 def fetch_export(url)
-  uri = URI(url)
-  request = Net::HTTP::Get.new(uri)
-  request["User-Agent"] = "BSidesMunich2026 schedule sync"
+  attempts = 0
+  begin
+    attempts += 1
+    warn "Downloading #{url} (attempt #{attempts}/3)…"
+    uri = URI(url)
+    request = Net::HTTP::Get.new(uri)
+    request["User-Agent"] = "BSidesMunich2026 schedule sync"
 
-  response = Net::HTTP.start(
-    uri.host,
-    uri.port,
-    use_ssl: true,
-    open_timeout: 10,
-    read_timeout: 30
-  ) { |http| http.request(request) }
+    response = Net::HTTP.start(
+      uri.host,
+      uri.port,
+      use_ssl: true,
+      open_timeout: 30,
+      read_timeout: 60
+    ) { |http| http.request(request) }
 
-  abort_sync("download failed with HTTP #{response.code}") unless response.is_a?(Net::HTTPSuccess)
-  response.body
+    if [429, 500, 502, 503, 504].include?(response.code.to_i) && attempts < 3
+      raise IOError, "temporary HTTP #{response.code}"
+    end
+    abort_sync("download failed for #{url} with HTTP #{response.code}") unless response.is_a?(Net::HTTPSuccess)
+    response.body
+  rescue Timeout::Error, IOError, EOFError, SocketError, SystemCallError => e
+    # Some networks time out with Ruby's address selection while IPv4 works.
+    warn "#{e.class}: #{e.message}; trying curl over IPv4…"
+    body, error, status = Open3.capture3(
+      "curl", "-4", "--fail", "--silent", "--show-error", "--location",
+      "--connect-timeout", "15", "--max-time", "50", url
+    )
+    return body if status.success?
+    warn "IPv4 fallback failed: #{error.strip}"
+    if attempts < 3
+      warn "#{e.class}: #{e.message}; retrying in #{attempts * 2}s…"
+      sleep(attempts * 2)
+      retry
+    end
+    abort_sync("download failed for #{url} after #{attempts} attempts: #{e.class}: #{e.message}")
+  end
 rescue StandardError => e
-  abort_sync("download failed: #{e.message}")
+  abort_sync("download failed for #{url}: #{e.class}: #{e.message}")
 end
 
 def sessions_for(day)
